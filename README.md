@@ -11,7 +11,7 @@
 <p align="center"><b>Mend — an AI repair kit for iPhone, Android, Mac, Windows, Linux and every disk</b></p>
 
 <p align="center">
-  Version <b>1.0.4</b> · released 11 Oct 2026 ·
+  Version <b>1.0.5</b> · released 11 Oct 2026 ·
   <a href="https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest">Download</a> ·
   <a href="https://ipconfig.co.network/mend">Website</a> ·
   <a href="RELEASE-NOTES.md">Release notes</a>
@@ -255,15 +255,15 @@ irm https://ipconfig.co.network/updates/mend/install.ps1 | iex
 SmartScreen may warn on first launch: *More info → Run anyway*.
 
 The same command installs the **ARM64** build on Windows on Arm (Snapdragon / Surface Pro X and similar) —
-or download `Mend_1.0.4_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
+or download `Mend_1.0.5_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
 
 **Linux** (x86_64)
 
 - AppImage: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` — installs to `~/.local/bin/mend`.
-  Or download `Mend_1.0.4_amd64.AppImage` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest),
+  Or download `Mend_1.0.5_amd64.AppImage` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest),
   then `chmod +x Mend_*.AppImage && ./Mend_*.AppImage` (needs `libfuse2`).
 - Debian / Ubuntu: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash -s -- --deb`,
-  or download `Mend_1.0.4_amd64.deb` and `sudo apt install ./Mend_1.0.4_amd64.deb`.
+  or download `Mend_1.0.5_amd64.deb` and `sudo apt install ./Mend_1.0.5_amd64.deb`.
 
 **Linux ARM64** (Raspberry Pi 4/5 with a 64-bit OS, ARM laptops and servers) — Debian / Ubuntu:
 
@@ -271,7 +271,7 @@ or download `Mend_1.0.4_arm64-setup.exe` from the [latest release](https://githu
 curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
 ```
 
-or download `Mend_1.0.4_arm64.deb` and `sudo apt install ./Mend_1.0.4_arm64.deb`.
+or download `Mend_1.0.5_arm64.deb` and `sudo apt install ./Mend_1.0.5_arm64.deb`.
 ARM64 Linux has a .deb only — there is no ARM AppImage.
 
 **ChromeOS** — Mend runs in the Linux development environment (a Debian container), on Intel/AMD and ARM Chromebooks:
@@ -282,8 +282,8 @@ ARM64 Linux has a .deb only — there is no ARM AppImage.
    curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
    ```
    Or by hand: `dpkg --print-architecture` says `amd64` (Intel/AMD) or `arm64` (ARM). Download
-   `Mend_1.0.4_amd64.deb` or `Mend_1.0.4_arm64.deb`, move it to **Linux files**, then double-click it —
-   or run `sudo apt install ./Mend_1.0.4_<arch>.deb`.
+   `Mend_1.0.5_amd64.deb` or `Mend_1.0.5_arm64.deb`, move it to **Linux files**, then double-click it —
+   or run `sudo apt install ./Mend_1.0.5_<arch>.deb`.
 3. Open Mend from the launcher (**Linux apps**). ChromeOS limits USB passthrough, so phone repair and SMART may not
    reach devices; backups, contacts and the AI work fully. Share folders with Linux from the Files app.
 
@@ -294,8 +294,8 @@ pkg install webkit2-gtk_41 libimobiledevice smartmontools bash curl
 curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
 ```
 
-Or download `Mend_1.0.4_freebsd_amd64.tar.gz` and, in the download folder,
-`tar -xzf Mend_1.0.4_freebsd_amd64.tar.gz && sudo sh install.sh` — it installs to `/usr/local/bin/mend`
+Or download `Mend_1.0.5_freebsd_amd64.tar.gz` and, in the download folder,
+`tar -xzf Mend_1.0.5_freebsd_amd64.tar.gz && sudo sh install.sh` — it installs to `/usr/local/bin/mend`
 with a menu entry and icon (`sh install.sh --uninstall` removes them).
 
 **Haiku** — Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
@@ -310,14 +310,14 @@ On FreeBSD, run the installer again to update.
 
 | System | CPU | Download | Updates itself |
 |---|---|---|---|
-| macOS 10.15+ | Apple silicon | `Mend_1.0.4_aarch64.dmg` | yes |
-| macOS 10.15+ | Intel | `Mend_1.0.4_x64.dmg` | yes |
-| Windows 10 / 11 | x64 | `Mend_1.0.4_x64-setup.exe` | yes |
-| Windows 11 | ARM64 | `Mend_1.0.4_arm64-setup.exe` | yes |
-| Linux | x86_64 | `Mend_1.0.4_amd64.AppImage` · `Mend_1.0.4_amd64.deb` | yes |
-| Linux | ARM64 | `Mend_1.0.4_arm64.deb` | yes |
+| macOS 10.15+ | Apple silicon | `Mend_1.0.5_aarch64.dmg` | yes |
+| macOS 10.15+ | Intel | `Mend_1.0.5_x64.dmg` | yes |
+| Windows 10 / 11 | x64 | `Mend_1.0.5_x64-setup.exe` | yes |
+| Windows 11 | ARM64 | `Mend_1.0.5_arm64-setup.exe` | yes |
+| Linux | x86_64 | `Mend_1.0.5_amd64.AppImage` · `Mend_1.0.5_amd64.deb` | yes |
+| Linux | ARM64 | `Mend_1.0.5_arm64.deb` | yes |
 | ChromeOS (Linux development environment) | x86_64 / ARM64 | the Linux `.deb` for the Chromebook's CPU | yes |
-| FreeBSD 14+ | amd64 | `Mend_1.0.4_freebsd_amd64.tar.gz` | no — rerun the installer |
+| FreeBSD 14+ | amd64 | `Mend_1.0.5_freebsd_amd64.tar.gz` | no — rerun the installer |
 | Haiku | — | not available | — |
 
 Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
