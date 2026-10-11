@@ -11,7 +11,7 @@
 <p align="center"><b>Mend — an AI repair kit for iPhone, Android, Mac, Windows, Linux and every disk</b></p>
 
 <p align="center">
-  Version <b>1.0.3</b> · released 11 Oct 2026 ·
+  Version <b>1.0.4</b> · released 11 Oct 2026 ·
   <a href="https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest">Download</a> ·
   <a href="https://ipconfig.co.network/mend">Website</a> ·
   <a href="RELEASE-NOTES.md">Release notes</a>
@@ -24,7 +24,7 @@
 
 Mend rescues phones and computers in one small app (a few MB): one-click Recovery Mode, iOS and Android
 system repair, Mac/Windows/Linux system and boot repair, a corrupted-settings fixer, a partition manager,
-deep disk health, tiny de-duplicated backups and iCloud contacts — with AI that explains each step.
+deep disk health, tiny de-duplicated backups and a contact manager for every account — with AI that explains each step.
 It also carries a **Fix Library of 1,359 known problems** — 665 for iPhone & iPad and 694 for Mac — each with
 colour-coded steps and the one-click repair that goes with it, a one-click **Checkup** with a score, and
 **Standard and Full Repair for macOS** as well as iOS.
@@ -91,18 +91,59 @@ temperature against its limits, read/write statistics since start-up, errors and
 with the repair that fixes it: remap bad sectors, a write test that forces remapping, TRIM, self-tests, or the
 memory and process checks behind heavy daily writing. Export it as text, Markdown or a web page.
 
-<p align="center"><img src="screenshots/coverage.png" width="720" alt="What Standard and Full Repair fix: 642 and 650 Mac problems, with the problems that need steps or hardware listed separately"></p>
+<p align="center"><img src="screenshots/hddlife.png" width="720" alt="Hard-disk life estimate: age, head parking and start-stop counts as bars, with the lowest setting the estimate"></p>
+
+**Hard-disk life left.** Hard drives have no wear counter, so Mend estimates their life left from:
+- age, against the usual service life of desktop, laptop or NAS drives;
+- head parking and start-stop counts, against their ratings;
+- any bad sectors.
+
+It shows which of these sets the figure, and the years left. **Full report for all** reads every disk at once, and a
+Disk Health setting (on by default) shows it whenever the page opens.
+
+<p align="center"><img src="screenshots/coverage.png" width="720" alt="How Standard and Deep Repair fix problems: what each replaces, keeps and why it works"></p>
 
 **500+ problems per repair, counted honestly.** Every repair screen shows what it resolves: iPhone Standard Repair
 560 and Deep Repair 568, Mac Standard Repair 642 and Full Repair 650. Problems a reinstall can't fix — accessories,
-apps, accounts, carriers and hardware — are listed separately with their steps.
+apps, accounts, carriers and hardware — are listed separately with their steps. Each repair screen explains how it
+works: Standard Repair puts back a perfect copy of the system and keeps your data, which removes damaged, half-updated
+or mismatched system files; Full Repair also erases your data, which is where a forgotten passcode, unwanted
+management or malware lives. Every fix in the Library says which repair resolves it.
 
-<p align="center"><img src="screenshots/contactfixer.png" width="720" alt="Contact fixer: accounts and files side by side, problems grouped by kind with examples and one Fix button"></p>
+<p align="center"><img src="screenshots/contacts.png" width="720" alt="Contacts overview: every source in a side pane — this Mac's iCloud, Google and Outlook accounts, iCloud/CardDAV, iPhones, Android accounts and Mend's library — orbiting one contact card"></p>
 
-**Contact manager and fixer.** Several iCloud and CardDAV accounts side by side, plus .vcf and .csv files from
-Google, Outlook or Android. *Fix everything* finds 16 kinds of problem — impossible numbers, missing country codes,
-misspelt email domains, NAMES IN CAPITALS, invisible characters, empty contacts, huge photos — and fixes them in one
-go. Broken .vcf files are repaired as they open. Copy or move contacts between accounts.
+**Contacts — every account separately, like Contacts on the Mac.** Laid out like KDE Kontact: a side pane of sources,
+nothing ever merged:
+- **This Mac:** every account in the Mac's Contacts — any number of iCloud, Google, Outlook/Exchange and Yahoo accounts, plus On My Mac — read and edited through Apple's own Contacts framework.
+- **iCloud and CardDAV accounts** signed in here.
+- **Every iPhone and iPad**, from its backup, with photos and groups.
+- **Every account on every Android phone.**
+- **Mend's own library:** address books kept as .vcf, with earlier versions kept.
+- **Open files:** .vcf, Google or Outlook .csv, and Thunderbird .ldif.
+
+The overview shows totals, problems and birthdays this month, and finds a person in every source at once.
+
+<p align="center"><img src="screenshots/contactcard.png" width="720" alt="A contact with every field and phone number details: India, mobile, real number, international, E.164 and local forms"></p>
+
+**Every field, and every number explained.** Names with prefix, middle, maiden and phonetic forms; work; phones,
+emails, addresses, websites, messaging, social profiles, related people, dates, groups and notes. Each phone number is
+checked with Google's numbering rules for every country. Mend shows:
+- its flag and country, and the type of line (mobile, landline, toll-free, VoIP);
+- whether it can really exist;
+- its international, E.164 and local forms;
+- Call and WhatsApp buttons, and a one-click fix to the international form.
+
+<p align="center"><img src="screenshots/contactfixer.png" width="720" alt="Contact fixer: problems grouped by kind with examples and one Fix button"></p>
+
+**Fix, merge, group and move.** Every source has tabs:
+- **Fix everything:** 16 kinds of problem fixed in one go.
+- **Duplicates:** merged within that source only.
+- **Numbers:** every number with its details.
+- **Groups:** the Mac's own groups, or vCard categories.
+- **Birthdays & dates:** with a calendar file.
+- **Copy & move:** to any account, a library book, an Android phone, or a .vcf, .csv or .ldif file.
+
+Broken .vcf files are repaired as they open.
 
 <p align="center"><img src="screenshots/iphonedata.png" width="720" alt="iPhone data: Messages, WhatsApp, call history, contacts, notes and Safari tiles from a backup"></p>
 
@@ -154,8 +195,10 @@ readable on every surface.
   report with every indicator, lifetime left, years left, endurance and read/write statistics, exported as text,
   Markdown or HTML; repairs for bad sectors (remap, write test), TRIM and worn drives
 - **Tiny backups** — content-defined de-duplication and zstd; verify, browse, restore single files
-- **Contacts** — several iCloud and CardDAV accounts plus .vcf/.csv files; edit every field and photo, merge
-  duplicates, fix 16 kinds of problem in one go, repair broken .vcf files, copy or move between accounts
+- **Contacts (Kontact-style)** — every account separately: this Mac's iCloud, Google, Outlook/Exchange, Yahoo and
+  On My Mac accounts; iCloud/CardDAV; every iPhone (from its backup) and every Android account; Mend's own versioned
+  library; .vcf / .csv / .ldif files. Every field, phone-number details for every country, groups, birthdays (.ics),
+  fix 16 kinds of problem, merge duplicates, copy or move anywhere
 - **iPhone data** — Messages, WhatsApp, calls, contacts, notes, Safari, calendar and voicemail from a backup, exported
   as CSV or HTML; photos, voice memos and WhatsApp media; MVT spyware check; transfer to another iPhone
 - **Repair another Mac** — revive or restore an Apple silicon Mac in DFU, or repair a Mac shared as a disk
@@ -175,9 +218,10 @@ readable on every surface.
 | ![Overview](screenshots/home.png) <br> *Overview — devices, disk health, one-click fixes* | ![Fix Library](screenshots/library.png) <br> *Fix Library — 1,359 known problems, colour-coded steps* |
 | ![iPhone](screenshots/ios.png) <br> *iPhone & iPad — Recovery Mode, repair, backups* | ![Android](screenshots/android.png) <br> *Android — Recovery, Fastboot, OTA repair* |
 | ![Disks](screenshots/disks.png) <br> *Disks & Partitions — colour map of every disk* | ![Health](screenshots/health.png) <br> *Disk Health — SMART, wear, temperature* |
-| ![Backups](screenshots/backup.png) <br> *Tiny Backups — a fraction of the size* | ![Contacts](screenshots/contacts.png) <br> *Contacts — iCloud, duplicates, number fixes* |
+| ![Backups](screenshots/backup.png) <br> *Tiny Backups — a fraction of the size* | ![Contacts](screenshots/contacts.png) <br> *Contacts — every account side by side, nothing merged* |
 | ![System](screenshots/system.png) <br> *System repair* | ![Mend AI](screenshots/ai.png) <br> *Mend AI — diagnose and run the fix* |
-| ![Disk report](screenshots/diskreport.png) <br> *Full disk report — gauges, estimates, every indicator* | ![Contact fixer](screenshots/contactfixer.png) <br> *Contact fixer — 16 kinds of problem in one go* |
+| ![Disk report](screenshots/diskreport.png) <br> *Full disk report — gauges, estimates, every indicator* | ![Contacts](screenshots/contactcard.png) <br> *Contacts — every account, every field, number details* |
+| ![HDD life](screenshots/hddlife.png) <br> *Hard-disk life left — how it's worked out* | ![Contact fixer](screenshots/contactfixer.png) <br> *Contact fixer — 16 kinds of problem in one go* |
 | ![iPhone data](screenshots/iphonedata.png) <br> *iPhone data — messages, WhatsApp, calls, notes* | ![Another Mac](screenshots/othermac.png) <br> *Repair another Mac — DFU revive and restore* |
 
 ## Helpers
@@ -211,15 +255,15 @@ irm https://ipconfig.co.network/updates/mend/install.ps1 | iex
 SmartScreen may warn on first launch: *More info → Run anyway*.
 
 The same command installs the **ARM64** build on Windows on Arm (Snapdragon / Surface Pro X and similar) —
-or download `Mend_1.0.3_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
+or download `Mend_1.0.4_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
 
 **Linux** (x86_64)
 
 - AppImage: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` — installs to `~/.local/bin/mend`.
-  Or download `Mend_1.0.3_amd64.AppImage` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest),
+  Or download `Mend_1.0.4_amd64.AppImage` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest),
   then `chmod +x Mend_*.AppImage && ./Mend_*.AppImage` (needs `libfuse2`).
 - Debian / Ubuntu: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash -s -- --deb`,
-  or download `Mend_1.0.3_amd64.deb` and `sudo apt install ./Mend_1.0.3_amd64.deb`.
+  or download `Mend_1.0.4_amd64.deb` and `sudo apt install ./Mend_1.0.4_amd64.deb`.
 
 **Linux ARM64** (Raspberry Pi 4/5 with a 64-bit OS, ARM laptops and servers) — Debian / Ubuntu:
 
@@ -227,7 +271,7 @@ or download `Mend_1.0.3_arm64-setup.exe` from the [latest release](https://githu
 curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
 ```
 
-or download `Mend_1.0.3_arm64.deb` and `sudo apt install ./Mend_1.0.3_arm64.deb`.
+or download `Mend_1.0.4_arm64.deb` and `sudo apt install ./Mend_1.0.4_arm64.deb`.
 ARM64 Linux has a .deb only — there is no ARM AppImage.
 
 **ChromeOS** — Mend runs in the Linux development environment (a Debian container), on Intel/AMD and ARM Chromebooks:
@@ -238,8 +282,8 @@ ARM64 Linux has a .deb only — there is no ARM AppImage.
    curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
    ```
    Or by hand: `dpkg --print-architecture` says `amd64` (Intel/AMD) or `arm64` (ARM). Download
-   `Mend_1.0.3_amd64.deb` or `Mend_1.0.3_arm64.deb`, move it to **Linux files**, then double-click it —
-   or run `sudo apt install ./Mend_1.0.3_<arch>.deb`.
+   `Mend_1.0.4_amd64.deb` or `Mend_1.0.4_arm64.deb`, move it to **Linux files**, then double-click it —
+   or run `sudo apt install ./Mend_1.0.4_<arch>.deb`.
 3. Open Mend from the launcher (**Linux apps**). ChromeOS limits USB passthrough, so phone repair and SMART may not
    reach devices; backups, contacts and the AI work fully. Share folders with Linux from the Files app.
 
@@ -250,8 +294,8 @@ pkg install webkit2-gtk_41 libimobiledevice smartmontools bash curl
 curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
 ```
 
-Or download `Mend_1.0.3_freebsd_amd64.tar.gz` and, in the download folder,
-`tar -xzf Mend_1.0.3_freebsd_amd64.tar.gz && sudo sh install.sh` — it installs to `/usr/local/bin/mend`
+Or download `Mend_1.0.4_freebsd_amd64.tar.gz` and, in the download folder,
+`tar -xzf Mend_1.0.4_freebsd_amd64.tar.gz && sudo sh install.sh` — it installs to `/usr/local/bin/mend`
 with a menu entry and icon (`sh install.sh --uninstall` removes them).
 
 **Haiku** — Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
@@ -266,14 +310,14 @@ On FreeBSD, run the installer again to update.
 
 | System | CPU | Download | Updates itself |
 |---|---|---|---|
-| macOS 10.15+ | Apple silicon | `Mend_1.0.3_aarch64.dmg` | yes |
-| macOS 10.15+ | Intel | `Mend_1.0.3_x64.dmg` | yes |
-| Windows 10 / 11 | x64 | `Mend_1.0.3_x64-setup.exe` | yes |
-| Windows 11 | ARM64 | `Mend_1.0.3_arm64-setup.exe` | yes |
-| Linux | x86_64 | `Mend_1.0.3_amd64.AppImage` · `Mend_1.0.3_amd64.deb` | yes |
-| Linux | ARM64 | `Mend_1.0.3_arm64.deb` | yes |
+| macOS 10.15+ | Apple silicon | `Mend_1.0.4_aarch64.dmg` | yes |
+| macOS 10.15+ | Intel | `Mend_1.0.4_x64.dmg` | yes |
+| Windows 10 / 11 | x64 | `Mend_1.0.4_x64-setup.exe` | yes |
+| Windows 11 | ARM64 | `Mend_1.0.4_arm64-setup.exe` | yes |
+| Linux | x86_64 | `Mend_1.0.4_amd64.AppImage` · `Mend_1.0.4_amd64.deb` | yes |
+| Linux | ARM64 | `Mend_1.0.4_arm64.deb` | yes |
 | ChromeOS (Linux development environment) | x86_64 / ARM64 | the Linux `.deb` for the Chromebook's CPU | yes |
-| FreeBSD 14+ | amd64 | `Mend_1.0.3_freebsd_amd64.tar.gz` | no — rerun the installer |
+| FreeBSD 14+ | amd64 | `Mend_1.0.4_freebsd_amd64.tar.gz` | no — rerun the installer |
 | Haiku | — | not available | — |
 
 Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
@@ -282,7 +326,7 @@ Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
 
 | Free | Pro monthly | Pro yearly |
 |---|---|---|
-| ₹0 | **₹20 / month** | **₹220 / year** |
+| ₹0 | **₹4,000 / month** | **₹6,000 / year** |
 | Download and use Mend for free | Renews every month, cancel any time | Renews every year — two months cheaper |
 
 After paying you get an activation code at once; in Mend open **Activate Pro** and paste it.
