@@ -1,2 +1,307 @@
-# mend-08-oct-2026-releases
-Mend — an AI repair kit: iPhone Recovery Mode, iOS &amp; Android repair, Mac/Windows/Linux repair, partitions, disk health, tiny backups, iCloud contacts. Downloads, release notes and the update feed.
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="icon-512.png">
+    <source media="(prefers-color-scheme: light)" srcset="icon-512-light.png">
+    <img src="icon-512-light.png" width="160" height="160" alt="Mend icon">
+  </picture>
+</p>
+
+<h1 align="center">Mend</h1>
+
+<p align="center"><b>Mend — an AI repair kit for iPhone, Android, Mac, Windows, Linux and every disk</b></p>
+
+<p align="center">
+  Version <b>1.0.3</b> · released 11 Oct 2026 ·
+  <a href="https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest">Download</a> ·
+  <a href="https://ipconfig.co.network/mend">Website</a> ·
+  <a href="RELEASE-NOTES.md">Release notes</a>
+</p>
+
+<p align="center">
+  <img src="icon-512.png" width="96" height="96" alt="Mend icon, dark">&nbsp;&nbsp;
+  <img src="icon-512-light.png" width="96" height="96" alt="Mend icon, light">
+</p>
+
+Mend rescues phones and computers in one small app (a few MB): one-click Recovery Mode, iOS and Android
+system repair, Mac/Windows/Linux system and boot repair, a corrupted-settings fixer, a partition manager,
+deep disk health, tiny de-duplicated backups and iCloud contacts — with AI that explains each step.
+It also carries a **Fix Library of 1,359 known problems** — 665 for iPhone & iPad and 694 for Mac — each with
+colour-coded steps and the one-click repair that goes with it, a one-click **Checkup** with a score, and
+**Standard and Full Repair for macOS** as well as iOS.
+
+## See it in action
+
+<p align="center"><img src="demos/splash.webp" width="720" alt="Mend's startup animation: a stitched gold ring sews itself shut around a heartbeat M"></p>
+
+**Startup.** The stitched ring sews itself shut, the heartbeat “M” beats twice, sparks fly and a live heartbeat line
+runs underneath — with its own synthesised sound. Any key skips it; *Reduce motion* turns it into a fade.
+
+<p align="center"><img src="demos/library.webp" width="720" alt="Fix Library: opening a fix, switching to Mac, searching for wifi keeps dropping"></p>
+
+**Fix Library — 1,359 known problems.** Search in your own words (“wifi keeps dropping”, “stuck on the Apple logo”),
+filter by colour-coded category, open a fix and tick off the numbered steps as you go. Star the fixes you want to keep,
+mark a problem “It's fixed!” and copy the steps to send to someone. Menus and paths are blue with violet ›,
+keys and buttons are gold, numbers are cyan, *keeps your data* is green and *erases* is red — so you can tell what
+a step does before reading it. The buttons under each fix run the matching repair.
+
+<p align="center"><img src="demos/checkup.webp" width="720" alt="Checkup: a radar sweep while Mend checks disks, storage, memory, security, battery and phones, then a score with Fix buttons"></p>
+
+**Checkup.** One button (⇧⌘C) checks disks, free space, memory, security, battery, sleep, firewall, Time Machine,
+updates, recent errors and every connected phone — read-only, about 20 seconds. Each result lands on the radar in its
+colour — green good, gold to check, red to fix — and anything that needs attention has a Fix button.
+
+<p align="center"><img src="demos/macrepair.webp" width="720" alt="Standard and Full Repair for macOS: choosing an installer and reviewing the repair"></p>
+
+**Standard and Full Repair for macOS.** The same two levels as iPhone. *Standard Repair* makes a restore point and
+reinstalls macOS over itself — your files, apps and settings stay. *Full Repair* erases the Mac and installs a clean
+macOS, like new (on Apple silicon through Erase All Content and Settings).
+
+<p align="center"><img src="demos/repair.webp" width="720" alt="Reviewing and running a repair: exact steps, risk badge, live log and a stitched-shut success animation"></p>
+
+**Repairs you can see.** Every repair shows its risk and the exact commands first. While it runs, a seam stitches
+itself shut as the percentage climbs and the live log is colour-coded line by line (errors red, success green,
+numbers cyan). It finishes with a check, confetti and a chime.
+
+<p align="center"><img src="demos/ai.webp" width="720" alt="Mend AI diagnosing an iPhone stuck on the Apple logo and offering Run buttons"></p>
+
+**Mend AI.** Describe the problem; the AI answers with the safest steps first and turns its suggestions into Run
+buttons. It reads the Fix Library too, so its advice matches known fixes. Free for everyone, or use GitHub Copilot,
+any local model or an online AI.
+
+<p align="center"><img src="demos/resize.webp" width="720" alt="The Mend window shrinking from 1300 to 760 pixels while every part rearranges to fit"></p>
+
+**Fits any window.** Shrink the window and everything rearranges instead of overlapping: the sidebar folds into an
+icon rail, the overview's rings move under the title, cards stack and text wraps.
+
+<p align="center"><img src="demos/disks.webp" width="720" alt="Disks and Partitions: clicking partitions on a colour map"></p>
+
+**Disks & Partitions.** Every disk as a colour map — one colour per file system. Click a partition for its details
+and repairs; the system disk is protected.
+
+<p align="center"><img src="demos/health.webp" width="720" alt="Disk Health: SMART score ring, temperature, wear and findings"></p>
+
+**Disk Health.** A health score ring, temperature, wear, power-on time and plain findings from SMART, plus a speed
+test and a full read scan.
+
+<p align="center"><img src="screenshots/diskreport.png" width="720" alt="Full disk report: health and lifetime gauges, years left, endurance, temperature bar, read/write statistics and every SMART indicator"></p>
+
+**Full disk report — more than DriveDx.** Every SMART and NVMe indicator with its status, plus health and
+lifetime-left gauges, years left at 8 hours a day, projected endurance, data written per powered-on day,
+temperature against its limits, read/write statistics since start-up, errors and retries — and each finding comes
+with the repair that fixes it: remap bad sectors, a write test that forces remapping, TRIM, self-tests, or the
+memory and process checks behind heavy daily writing. Export it as text, Markdown or a web page.
+
+<p align="center"><img src="screenshots/coverage.png" width="720" alt="What Standard and Full Repair fix: 642 and 650 Mac problems, with the problems that need steps or hardware listed separately"></p>
+
+**500+ problems per repair, counted honestly.** Every repair screen shows what it resolves: iPhone Standard Repair
+560 and Deep Repair 568, Mac Standard Repair 642 and Full Repair 650. Problems a reinstall can't fix — accessories,
+apps, accounts, carriers and hardware — are listed separately with their steps.
+
+<p align="center"><img src="screenshots/contactfixer.png" width="720" alt="Contact fixer: accounts and files side by side, problems grouped by kind with examples and one Fix button"></p>
+
+**Contact manager and fixer.** Several iCloud and CardDAV accounts side by side, plus .vcf and .csv files from
+Google, Outlook or Android. *Fix everything* finds 16 kinds of problem — impossible numbers, missing country codes,
+misspelt email domains, NAMES IN CAPITALS, invisible characters, empty contacts, huge photos — and fixes them in one
+go. Broken .vcf files are repaired as they open. Copy or move contacts between accounts.
+
+<p align="center"><img src="screenshots/iphonedata.png" width="720" alt="iPhone data: Messages, WhatsApp, call history, contacts, notes and Safari tiles from a backup"></p>
+
+**iPhone data.** Browse and export Messages, WhatsApp, call history, contacts, notes, Safari, calendar and voicemail
+from a backup — as CSV or a printable page — copy out photos, voice memos and WhatsApp media, check a backup for
+spyware with MVT, and move everything from one iPhone to another.
+
+<p align="center"><img src="screenshots/othermac.png" width="720" alt="Repair another Mac: two Macs connected by USB-C, one in DFU, with Revive and Restore"></p>
+
+**Repair another Mac.** Connect a Mac that won't start, put it in DFU with the key guide for its model, and revive
+it (keeps its files) or restore it (clean macOS) from this Mac. Or share its disk and run First Aid, copy its files
+off, or reinstall macOS onto it.
+
+**Any number of devices.** Every connected iPhone, iPad, Android and Mac — normal, Recovery or DFU — gets its own
+tabs, and repairs run side by side. Switching tabs or screens never stops a running job.
+
+<p align="center"><img src="demos/theme.webp" width="720" alt="Switching between light and dark themes with a circular reveal"></p>
+
+**Light and dark.** The theme switches with a circular reveal from where you click. Nine colours, never pink, each
+readable on every surface.
+
+## AI
+
+- **Mend AI, built in and free for everyone** — no account, no key, nothing to set up
+- **GitHub Copilot CLI and GitHub Models** — use the AI you already have with GitHub
+- **Every local AI** — Ollama, LM Studio, llama.cpp, Jan, GPT4All, LocalAI, vLLM, KoboldCpp, Msty, AnythingLLM
+- **Online AI services** — any provider, by URL and API key
+- **Diagnose** — describe the problem; Mend AI suggests the safest repair first, with one-click Run buttons
+- **Explains everything** — every result, log and repair word (DFU, IPSW, SMART, GPT, BCD…) in plain words
+- **Safe** — the AI can only suggest repairs from Mend's own list; anything risky shows the exact steps first
+
+## Features
+
+- **iPhone & iPad** — Recovery Mode in and out in one click (free), Standard repair (keeps data, 560 problems), Deep repair
+  (clean iOS, 568) from signed firmware verified by SHA-256, DFU guide, battery health, backups and restore, apps, screenshots, live console
+- **Android** — reboot to Recovery / Bootloader / Fastboot / Sideload, exit Fastboot, official OTA and factory-image
+  repair, partition flashing, apps, photo and file copy, screenshots, logcat
+- **Mac repair** — First Aid, home permissions, Spotlight, “Open With”, fonts, DNS, Safe Mode and Recovery restarts,
+  NVRAM, macOS installers and bootable USB installers, local snapshots; **Standard Repair** (reinstall macOS, keep
+  data, 642 problems) and **Full Repair** (erase, clean macOS, 650); restart a stuck part (sound, Bluetooth,
+  iCloud Drive, menu bar, notifications, Quick Look, Dock, print queue) and see what's going on (CPU, memory,
+  sleep blockers, battery, background items, extensions, profiles, recent faults, Time Machine, firewall)
+- **Windows repair** — SFC, DISM, CHKDSK, Startup Repair, BCD backup and rebuild, network and Windows Update resets,
+  restore points, registry backup, problem drivers
+- **Linux repair** — broken packages, GRUB, initramfs, failed services, errors since boot, desktop reset
+- **Corrupted settings fixer** — finds damaged preference files and moves them aside (never deletes)
+- **Partition manager** — create, delete, resize, format, erase, wipe, convert MBR→GPT, clone; the system disk is protected
+- **Deep disk health** — SMART score, temperature, wear, bad sectors, self-tests, speed test, read scan; a full
+  report with every indicator, lifetime left, years left, endurance and read/write statistics, exported as text,
+  Markdown or HTML; repairs for bad sectors (remap, write test), TRIM and worn drives
+- **Tiny backups** — content-defined de-duplication and zstd; verify, browse, restore single files
+- **Contacts** — several iCloud and CardDAV accounts plus .vcf/.csv files; edit every field and photo, merge
+  duplicates, fix 16 kinds of problem in one go, repair broken .vcf files, copy or move between accounts
+- **iPhone data** — Messages, WhatsApp, calls, contacts, notes, Safari, calendar and voicemail from a backup, exported
+  as CSV or HTML; photos, voice memos and WhatsApp media; MVT spyware check; transfer to another iPhone
+- **Repair another Mac** — revive or restore an Apple silicon Mac in DFU, or repair a Mac shared as a disk
+- **Any number of devices** — every connected phone and Mac gets its own tabs and repairs run side by side
+- **Fix Library** — 665 iPhone & iPad and 694 Mac problems with steps and one-click repairs; tick off steps, save
+  fixes, mark them fixed, copy steps; also searchable from ⌘K
+- **Checkup** — a scored, read-only health check of this computer, its disks and connected phones, with Fix buttons
+- **Repair report** — export the checkup, devices, disks, fixed problems and recent repairs as Markdown
+- **Colour-coded everything** — paths, keys, numbers, brackets, file names, commands and log lines each have their own colour (no pink)
+- **Sounds and motion** — a heartbeat startup show, animated illustrations, a repair that stitches itself shut,
+  plug-in chimes, 70+ synthesised sounds and ten sound packs; light and dark themes
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Overview](screenshots/home.png) <br> *Overview — devices, disk health, one-click fixes* | ![Fix Library](screenshots/library.png) <br> *Fix Library — 1,359 known problems, colour-coded steps* |
+| ![iPhone](screenshots/ios.png) <br> *iPhone & iPad — Recovery Mode, repair, backups* | ![Android](screenshots/android.png) <br> *Android — Recovery, Fastboot, OTA repair* |
+| ![Disks](screenshots/disks.png) <br> *Disks & Partitions — colour map of every disk* | ![Health](screenshots/health.png) <br> *Disk Health — SMART, wear, temperature* |
+| ![Backups](screenshots/backup.png) <br> *Tiny Backups — a fraction of the size* | ![Contacts](screenshots/contacts.png) <br> *Contacts — iCloud, duplicates, number fixes* |
+| ![System](screenshots/system.png) <br> *System repair* | ![Mend AI](screenshots/ai.png) <br> *Mend AI — diagnose and run the fix* |
+| ![Disk report](screenshots/diskreport.png) <br> *Full disk report — gauges, estimates, every indicator* | ![Contact fixer](screenshots/contactfixer.png) <br> *Contact fixer — 16 kinds of problem in one go* |
+| ![iPhone data](screenshots/iphonedata.png) <br> *iPhone data — messages, WhatsApp, calls, notes* | ![Another Mac](screenshots/othermac.png) <br> *Repair another Mac — DFU revive and restore* |
+
+## Helpers
+
+Mend drives free, open tools for phones and SMART data. It shows what's missing and opens a terminal with the install command:
+macOS `brew install libimobiledevice libirecovery ideviceinstaller smartmontools` (idevicerestore isn't in Homebrew: Mend builds it for you, or uses Apple Configurator) and
+`brew install --cask android-platform-tools`; Debian/Ubuntu `sudo apt install libimobiledevice-utils ideviceinstaller idevicerestore usbmuxd smartmontools adb fastboot`;
+Windows `winget install smartmontools.smartmontools Google.PlatformTools`.
+
+## Install
+
+**macOS** (Apple silicon and Intel) — Terminal:
+
+```bash
+curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
+```
+
+The installer picks the right build, copies **Mend.app** to `/Applications` and clears the quarantine flag.
+If you install from the DMG by hand instead, run this once before the first launch:
+
+```bash
+xattr -cr /Applications/Mend.app
+```
+
+**Windows** — PowerShell:
+
+```powershell
+irm https://ipconfig.co.network/updates/mend/install.ps1 | iex
+```
+
+SmartScreen may warn on first launch: *More info → Run anyway*.
+
+The same command installs the **ARM64** build on Windows on Arm (Snapdragon / Surface Pro X and similar) —
+or download `Mend_1.0.3_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
+
+**Linux** (x86_64)
+
+- AppImage: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` — installs to `~/.local/bin/mend`.
+  Or download `Mend_1.0.3_amd64.AppImage` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest),
+  then `chmod +x Mend_*.AppImage && ./Mend_*.AppImage` (needs `libfuse2`).
+- Debian / Ubuntu: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash -s -- --deb`,
+  or download `Mend_1.0.3_amd64.deb` and `sudo apt install ./Mend_1.0.3_amd64.deb`.
+
+**Linux ARM64** (Raspberry Pi 4/5 with a 64-bit OS, ARM laptops and servers) — Debian / Ubuntu:
+
+```bash
+curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
+```
+
+or download `Mend_1.0.3_arm64.deb` and `sudo apt install ./Mend_1.0.3_arm64.deb`.
+ARM64 Linux has a .deb only — there is no ARM AppImage.
+
+**ChromeOS** — Mend runs in the Linux development environment (a Debian container), on Intel/AMD and ARM Chromebooks:
+
+1. **Settings → Advanced → Developers → Linux development environment → Turn on** (a few minutes the first time).
+2. Open the **Terminal** app and run the installer — it picks the right package for your Chromebook:
+   ```bash
+   curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
+   ```
+   Or by hand: `dpkg --print-architecture` says `amd64` (Intel/AMD) or `arm64` (ARM). Download
+   `Mend_1.0.3_amd64.deb` or `Mend_1.0.3_arm64.deb`, move it to **Linux files**, then double-click it —
+   or run `sudo apt install ./Mend_1.0.3_<arch>.deb`.
+3. Open Mend from the launcher (**Linux apps**). ChromeOS limits USB passthrough, so phone repair and SMART may not
+   reach devices; backups, contacts and the AI work fully. Share folders with Linux from the Files app.
+
+**FreeBSD** (amd64, FreeBSD 14 or later, with a desktop) — as root:
+
+```sh
+pkg install webkit2-gtk_41 libimobiledevice smartmontools bash curl
+curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
+```
+
+Or download `Mend_1.0.3_freebsd_amd64.tar.gz` and, in the download folder,
+`tar -xzf Mend_1.0.3_freebsd_amd64.tar.gz && sudo sh install.sh` — it installs to `/usr/local/bin/mend`
+with a menu entry and icon (`sh install.sh --uninstall` removes them).
+
+**Haiku** — Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
+
+**Homebrew** — Homebrew without a tap needs an Apple-notarized app; Mend is ad-hoc signed today, so use the curl installer.
+
+Mend updates itself on macOS, Windows (x64 and ARM64) and Linux (AppImage and .deb, x86_64 and ARM64): when a new
+version is out it offers to install it and restart. A .deb update asks for your password, like any package install.
+On FreeBSD, run the installer again to update.
+
+## Platforms
+
+| System | CPU | Download | Updates itself |
+|---|---|---|---|
+| macOS 10.15+ | Apple silicon | `Mend_1.0.3_aarch64.dmg` | yes |
+| macOS 10.15+ | Intel | `Mend_1.0.3_x64.dmg` | yes |
+| Windows 10 / 11 | x64 | `Mend_1.0.3_x64-setup.exe` | yes |
+| Windows 11 | ARM64 | `Mend_1.0.3_arm64-setup.exe` | yes |
+| Linux | x86_64 | `Mend_1.0.3_amd64.AppImage` · `Mend_1.0.3_amd64.deb` | yes |
+| Linux | ARM64 | `Mend_1.0.3_arm64.deb` | yes |
+| ChromeOS (Linux development environment) | x86_64 / ARM64 | the Linux `.deb` for the Chromebook's CPU | yes |
+| FreeBSD 14+ | amd64 | `Mend_1.0.3_freebsd_amd64.tar.gz` | no — rerun the installer |
+| Haiku | — | not available | — |
+
+Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
+
+## Pricing
+
+| Free | Pro monthly | Pro yearly |
+|---|---|---|
+| ₹0 | **₹20 / month** | **₹220 / year** |
+| Download and use Mend for free | Renews every month, cancel any time | Renews every year — two months cheaper |
+
+After paying you get an activation code at once; in Mend open **Activate Pro** and paste it.
+
+[Get Mend Pro →](https://ipconfig.co.network/mend/buy?plan=monthly) · [yearly](https://ipconfig.co.network/mend/buy?plan=yearly)
+
+## Links
+
+- Releases and downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases
+- Website: https://ipconfig.co.network/mend
+- Release notes: [RELEASE-NOTES.md](RELEASE-NOTES.md)
+- Update feed: [latest.json](latest.json)
+
+## Creator
+
+Made by Jagadeesh Kumar S, creator — [youtube.com/@JKS-sys](https://www.youtube.com/@JKS-sys)
+
+## Licence
+
+Proprietary. © 2026 Jagadeesh Kumar S. All rights reserved.
+The installers are free to download and use; the source code is not published, and copying,
+modifying or redistributing Mend is not permitted without written permission.
