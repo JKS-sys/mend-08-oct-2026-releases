@@ -2,6 +2,67 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.6 — 12 Oct 2026
+
+- **Standard Repair and Full Repair for macOS:** the same two levels as iPhone. Standard Repair makes a restore point and reinstalls macOS over itself — files, apps and settings stay. Full Repair erases the Mac and installs a clean macOS (Erase All Content and Settings on Apple silicon). Pick the installer in the new “Standard & Full Repair” tab.
+- **4,109 fixes, and 1,000+ for every repair:** the Fix Library now holds 1,223 iPhone & iPad, 1,159 Mac, 1,307 disk and 420 contact problems. Each repair screen shows exactly what it resolves:
+  - **iPhone:** Standard Repair 1,118, Deep Repair 1,126.
+  - **Mac:** Standard Repair 1,107, Full Repair 1,115.
+  - **Disks:** Standard Repair (check and repair the file system) 1,024; Full Repair (erase and reformat) 1,280 — every common file system on every kind of drive, with that file system's own repair commands.
+  - **Contacts:** Fix everything 336, Rebuild 420 — every real problem kind in each of 14 kinds of source.
+  - It also shows, honestly, which problems need steps or hardware instead. Tap a number to see the list. The Library has new Disks and Contacts tabs.
+- **Disk health beyond DriveDx:** “Full report” reads every SMART/NVMe indicator, then shows health and lifetime-left gauges, years left at 8 h a day, projected endurance, data written per powered-on day, temperature against its limits, read/write statistics since start-up, errors and retries, and a finding for each problem with the repair that fixes it. Export the report as text, Markdown or a web page.
+- **Repairs for bad sectors and worn disks:** remap bad sectors (chkdsk /r on Windows, a non-destructive badblocks pass on Linux), a write test that forces remapping (Linux, erases), zero-and-remap for Mac disks (erases), TRIM (trimforce, fstrim, ReTrim), long self-tests and turning SMART on. Heavy daily writing is flagged with what causes it.
+- **Contact manager, Kontact style — every account separately, like Contacts on the Mac:** a side pane lists every source and nothing is ever merged:
+  - **This Mac:** every account in the Mac's Contacts — any number of iCloud, Google, Outlook/Exchange and Yahoo accounts, plus On My Mac — read and edited through Apple's Contacts framework.
+  - **iCloud and CardDAV accounts** signed in here (Fastmail, Yahoo, Nextcloud…).
+  - **Every iPhone and iPad**, read from its backup with photos and groups.
+  - **Every account on every Android phone**, each Google account and the SIM listed separately.
+  - **Mend's own library:** address books kept as .vcf in ~/Mend/Contacts/Library, with the last 30 versions of each kept so any earlier version can be brought back.
+  - **Open files:** .vcf, Google or Outlook .csv, and Thunderbird .ldif.
+  - **Overview page:** totals, problems, birthdays this month, a search across every source (results stay labelled by source), "Load every source" and "Save every source to the library".
+  - **Each source has tabs:** Contacts, Groups (the Mac's own groups or vCard categories), Birthdays & dates (with a calendar .ics), Fix everything, Duplicates, Numbers, and Copy & move (to any account, a library book, an Android phone or a file).
+- **Every contact field:** prefix, middle and maiden names, phonetic names, department and role, any number of phones, emails, addresses (with a map link), websites, messaging (WhatsApp, Telegram, Skype…), social profiles, related people, birthday and other dates, groups and notes. Apple's labels are kept, so cards look the same on the iPhone.
+- **Phone numbers in detail:** every number is checked with Google's numbering rules for every country. Mend shows:
+  - the country and its flag;
+  - the type of line: mobile, landline, toll-free, VoIP…;
+  - whether the number can really exist;
+  - its international, E.164 and local forms, each copyable;
+  - Call and WhatsApp buttons, and a one-click fix to the international form.
+- **Any number of devices at once:** every connected iPhone, iPad, Android and Mac — in normal, Recovery or DFU mode — gets its own tabs, and repairs run side by side. Changing tab or screen never stops a running job.
+- **iPhone data (iMazing-style):** browse and export Messages, WhatsApp, call history, contacts, notes, Safari, calendar and voicemail from a backup (CSV or a printable page), copy out photos, voice memos and WhatsApp media, check a backup for spyware with MVT, and transfer one iPhone to another.
+- **Repair another Mac:** revive or restore an Apple silicon Mac in DFU from this Mac with Apple Configurator, with key guides for every Mac; or share its disk and run First Aid, back it up or reinstall macOS onto it. iPhone repair also works through Apple Configurator when idevicerestore can't be installed.
+- **No overlaps in small windows:** every screen and tab, including every Contacts view, was checked at 560, 760, 900, 1000 and 1240 px wide.
+- **Hard-disk life left:** hard drives have no wear counter, so Mend now estimates their life. It weighs power-on hours against the usual service life of desktop, laptop or NAS drives, head load cycles and start-stops against their ratings, and any bad sectors, then shows which of these sets the figure. It appears as a gauge, a breakdown, years left at 8 hours a day or 24/7, and a line in the exported report.
+- **Full report for all disks:** one button reads every disk. A Disk Health setting (on by default) shows the full report for every disk whenever the page opens. The full report now works on Windows too (with smartmontools). TRIM is offered only for SSDs.
+- **How each repair fixes problems:** iPhone and Mac repair screens explain step by step what Standard and Full (Deep) Repair replace, what they keep and why that fixes problems. Every fix in the Fix Library is marked with what resolves it: Standard Repair, Full Repair, the steps, or hardware.
+- **iPhone Apps tab fixed:** it uses the current ideviceinstaller (`list --xml`) and falls back to older versions. It lists your apps, Apple's apps or all, sorts by name or size, and shows the real error if the iPhone doesn't answer.
+- **No more caps:** long lists (contacts, chats, backup files, Android apps, unreadable files) load more as you scroll instead of stopping at a few hundred. iPhone Safari and calendar history is read in full. Any number of iPhones, iPads and Macs can be connected and repaired at the same time.
+- **Helpers are found where they really are:**
+  - **Apple Configurator from the App Store is detected straight away.** Mend uses its tool from inside the app (or finds the app with Spotlight), so "Install Automation Tools" is no longer needed.
+  - **No more "already installed" loop for libimobiledevice and ideviceinstaller.** Mend shows exactly which commands are missing and installs only those Homebrew packages; if Homebrew already has a package, it relinks it instead of reinstalling. ideviceinstaller (for the Apps tab) is now its own helper.
+  - **Mend notices installs by itself.** After you press Install it checks every few seconds, and again when you switch back to it — no "Check again" needed.
+- **idevicerestore installs reliably:** Mend writes its own build script, which clones libimobiledevice, idevicerestore and ideviceinstaller from GitHub (retrying), builds the newest versions into ~/Mend/limd without sudo, and installs only the Homebrew packages that are missing — no more is.gd link (blocked on some networks) or "already installed" warnings. With Apple Configurator installed, idevicerestore is optional and shown as covered.
+- **iPhone backups fixed:**
+  - Mend's newest tool build fixes backups that fail with old libimobiledevice on recent iOS.
+  - **Back up with Apple Configurator** is a second route that works with every iOS version.
+  - A failed backup is explained in plain words, with buttons that fix it: Trust again, build the newest tools, back up with Apple Configurator, choose another folder.
+- **Owner Panel → Active devices:** who is using Mend right now, today, this week and this month, on a live radar, with versions, systems, countries and a device list. The data comes from an anonymous heartbeat every 30 minutes: a hashed machine id, version, system and plan, never an IP address.
+- **New features:**
+  - **Health over time:** disk health, life left and iPhone battery capacity are kept day by day and drawn as lines.
+  - **Daily disk watch** (on by default): Mend re-checks every disk once a day while it's open and warns if health drops.
+  - **Repair history** for every device.
+  - **QR codes** for contacts.
+  - **"Sell or give away" checklists** for iPhone and Mac.
+- **Mend Pro is now ₹4,000 a month or ₹6,000 a year.**
+- **More colour and sound:** every tab has its own colour, and names start in colour. A new animated Contacts overview shows your sources orbiting a contact card. Gauges and date badges are animated. New sounds: sync, library book, dial, a birthday tune, gauge sweep, a wrench when you press Install, and a chime when a helper is ready. Button icons, table columns, fact labels and helper rows have their own colours; new animated pictures — a spinning hard disk or flickering SSD on every disk, an iPhone streaming into a backup drive (broken link when it fails), a toolbox with turning gears while helpers install, an active-devices radar — and new sounds for platters, flash chips and backup streams; section subtitles colour their numbers and paths, and an animated toolbox shows while a helper installs.
+- **Checkup (⇧⌘C):** one button checks disks, free space, memory, security, battery, sleep, firewall, Time Machine, updates, recent errors and every connected phone — read-only — and gives a score with a Fix button for anything that needs attention.
+- **Fix Library tools:** tick off steps as you go, save fixes with a star, mark a problem “It's fixed!”, filter by Saved, One-click or Fixed, and copy the steps to send to someone.
+- **Repair report:** Helpers & Log → Export report saves the checkup, devices, disks, fixed problems and recent repairs as a Markdown file.
+- **macOS keeps Mend's permissions after updates:** Mac builds are now signed with one permanent identity, so “Mend would like to access files on a removable volume” and the other permission prompts are asked once — not after every update. The prompts also explain why Mend asks.
+- **More colour, no pink:** brackets change colour with each nesting level, section titles and borders take their section's colour, headings and dialog titles are tinted, and keys, numbers and file paths stand out everywhere.
+- **More graphics, motion and sound:** gauges that sweep to their value, a temperature bar, a cable pulse between two Macs when one is found in DFU, chat bubbles for messages, colour-coded problem cards in the contact fixer; a radar sweep for the Checkup, an animated Mac being reinstalled, platform icons orbiting the startup logo, a slow colour aurora behind every screen, a colour sweep when you change screens, and new sounds — a note per area, radar, tick-off, star, “fixed” fanfare and report.
+
 ## Mend 1.0.5 — 11 Oct 2026
 
 - **Standard Repair and Full Repair for macOS:** the same two levels as iPhone. Standard Repair makes a restore point and reinstalls macOS over itself — files, apps and settings stay. Full Repair erases the Mac and installs a clean macOS (Erase All Content and Settings on Apple silicon). Pick the installer in the new “Standard & Full Repair” tab.
