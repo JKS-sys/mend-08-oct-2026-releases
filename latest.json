@@ -12,35 +12,35 @@
       "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.3/Mend_x64.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SHhPZ2VCK3UxODk4RU13U2U2Z0pldlpRMnEzdHBmZXRzMnFWdXlrL0ZwSDNPbGdINDROOEtDOWhkS2pTM3gvaGRxWWV0bmdQekU1WDZ6TTkxK1JuZ1FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNTI5NjM2CWZpbGU6TWVuZF8xLjAuMl94NjQtc2V0dXAuZXhlCXZlcnNpb246MS4wLjIKc2lPRWlqNnkzZ24wNnBFY0tBNjJVZlhsZEJhZXIwc1FtQllSUm5tbVJaK0JDdjB4MzAyb2ZwMVJHMmVmd0QxUkR0UE5ZWnVxN241SGtlQURBSFBpQ3c9PQo=",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.2/Mend_1.0.2_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDJtLzZ0UjdoV0RPSUpEaC9zUHNGVzhmZEI4MG94UDFHVTNOYU11T0J4M2x5QXU3dTZTWlVvRHJ5T2RtKzhiVkpmWXFZeEFVYWIrSjRibXZwQloxRmdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzIwMTc0CWZpbGU6TWVuZF8xLjAuM194NjQtc2V0dXAuZXhlCXZlcnNpb246MS4wLjMKMWRzWm01aFF1ODNsVFFUZDQ4WlBJZ2UzR3BIclFOZkI3NXRVSUsyRU9HNkhwa0RoNDI0aTNnZUp5SkpqMmwyOUhETFZGRzQ2dCtRL1Jkbk90anlYRHc9PQo=",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.3/Mend_1.0.3_x64-setup.exe"
     },
     "windows-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SCtkOFQwQXQ5ei9DVHpzOGxnNmFQK1JxQ0F0TzNLYXhpNTVUY3ZudG5KUEFZSVVCRG1tUEFUQVVabGZiN1AzWWtDMmlwa21ZY1RNT3BXck41eEVOSEFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNTI5NjU2CWZpbGU6TWVuZF8xLjAuMl9hcm02NC1zZXR1cC5leGUJdmVyc2lvbjoxLjAuMgpMQ2RiYnNsQmh0QWlRQWIrTDluUlJQL21VZzNFYVVkSCt0WHEwQ2xvMmU5R3NBVytSYWdIMTlFRnpTbWdrRjNGUjVIN0FsUXZiN28xbXBraFY5QWRCQT09Cg==",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.2/Mend_1.0.2_arm64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDUxOXhBM251YTJjMFBPSkMxZDEweW9sbmV1MHQ0M3pGd1Y5Q3pGMzNmQWJzUDdUb0FHUndSZm5ia3Fzc3FsUDI1ZUdzS2l6OTA5TCtSbTBkc0ZMVmdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzIwMTUyCWZpbGU6TWVuZF8xLjAuM19hcm02NC1zZXR1cC5leGUJdmVyc2lvbjoxLjAuMwphZlhxZlkwYTY3SWFRVjEvWHQyZXJNNUtXNDNWT2pITHVHTldZOEo5UHdBYzNzazNDcFl2UHlEa2pMSTBJQjRtdmlnM3lNTHFHNUMrNnZEU2pSdXBDZz09Cg==",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.3/Mend_1.0.3_arm64-setup.exe"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SC8zSWN3a1cwN0ZmclUxbXlEWEFxRGI3Z2xtZk1jZjMwMnNMSnRZWDVXejZ5SVYyMFovZ1RJbms5clJpUEo2KzFQK0d1K25aNXFrRlE1eFRicnlac2cwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNTI5NTkyCWZpbGU6TWVuZF8xLjAuMl9hbWQ2NC5BcHBJbWFnZQl2ZXJzaW9uOjEuMC4yCjJYQmtObVBReFZTZ0V0YmM3MEFWQlVNRVdpV3lFOTB0WHl5WFBBVnJxZUFYWUsxWTN1M2xPNWY1dnQ3dzI3Ump1ZGlZM0ltZldGMDl2RFFqRkZBMUNnPT0K",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.2/Mend_1.0.2_amd64.AppImage"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDJhaDBCd2dlSWF0NTBrdVBJcHZ5VkxIVU5oZ1U0Y0w4UjAzTFFjWDYyT0thZEtubGF6dHdNeEROY1ErUTZTclM4M1lFeXlsdzR6NTI2QVdqMzRzSGdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzE5OTY4CWZpbGU6TWVuZF8xLjAuM19hbWQ2NC5BcHBJbWFnZQl2ZXJzaW9uOjEuMC4zCktqRTdBQUhrUldQWkExYmVnVUlQR2VVdU8rZFdOWHZPL01ha3FZNGlaNWtuRm1jcWZ5QXVJOXV6TjladEhxcmZ3aXVSOWo0aUZKL2p5T2ZEdUY1ekFRPT0K",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.3/Mend_1.0.3_amd64.AppImage"
     },
     "linux-x86_64-deb": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDFMUkhtRG82dXFta2JZVEVaekhmZTQrc2kvRDcrZEljdDBwTjZsZ3FXNm80di8wellhZ0VsZ1FXOTJQbGxwcjVzQnQzTHBBNU9PbGN1dUFjQnF4UVFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNTI5NTkyCWZpbGU6TWVuZF8xLjAuMl9hbWQ2NC5kZWIJdmVyc2lvbjoxLjAuMgpWaERaamJ0QVlFcmRPM2lENnJUNlgwbnBTaGk5N3JjYmRpNFhQNjFpQjMzcGY2WnJ6ZTJicDBjSDdVRTFvVm9UTGp6QlBvbHdSYzl3aUtxSXJiaGRBdz09Cg==",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.2/Mend_1.0.2_amd64.deb"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDJwTDY2QVRwdWc5NElNRTQ4eDRHZDNLekVsRVBEcktCM0NEd1B2dkc5bHAva2RCSDAxS2xqR0lEWXFPS3FCZG5WTEhKOGNpTmlhQ3FOcy9xK3VZTkFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzE5OTY4CWZpbGU6TWVuZF8xLjAuM19hbWQ2NC5kZWIJdmVyc2lvbjoxLjAuMwoyb3RYa1lOc0txVDlPZjllQmxYR0N6M1JyMVhzRGpZQVh6TG51TlA3MklHUS9JNlVVN0xjQXRtUWFobWRRRzJzUGtlM0NtRmhvK1JtdmFVSG5TcnNBUT09Cg==",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.3/Mend_1.0.3_amd64.deb"
     },
     "linux-aarch64-deb": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SHpSd0pOQS9CNStlaEUwVzE3eXI1ZE9HV1BmMnlDZ0p5ckdoekh4Sm1OY2U3OEJ3WEpkSUdPTkJ4dVo3L2JjV2dhRXI5OGYrVWxBZEFKeHVjWFJaa1FjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNTI5Mjk2CWZpbGU6TWVuZF8xLjAuMl9hcm02NC5kZWIJdmVyc2lvbjoxLjAuMgo0MktHckJRRDJDeDNHanFBRmxST1ZibnZrSnkxeGw5ak41U0NuZWFMWWhYNm53bWsxd1crd2htZjNuOFlMb0ltMTNQNVZjWUl3a2pLZHRtV3FEa1ZDdz09Cg==",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.2/Mend_1.0.2_arm64.deb"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SHlrU2tmUXZaaXlwY216THJHSkZISE4zWngzbnpiTXpYRzg2YXIvbUNMdGx6RUppUXZpOXhhanlZcXlTTm5sUDNJUFY4bC8yellPZHdkcTlMUnVuOUFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzIwMDE1CWZpbGU6TWVuZF8xLjAuM19hcm02NC5kZWIJdmVyc2lvbjoxLjAuMwpTZGI5VVhCdWxyc0pFWTIxREJsQkorbnl1VG5vc3FDVGppUStYMVdqdEVSS2FFdC9rbnZtOHVqSnRmYkE3TXZITzlYODhBT0VsUzV1TVJ4YnpSWmtCQT09Cg==",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.3/Mend_1.0.3_arm64.deb"
     }
   },
   "downloads": {
     "mac_arm": "Mend_1.0.3_aarch64.dmg",
     "mac_intel": "Mend_1.0.3_x64.dmg",
-    "windows": "Mend_1.0.2_x64-setup.exe",
-    "windows_arm": "Mend_1.0.2_arm64-setup.exe",
-    "appimage": "Mend_1.0.2_amd64.AppImage",
-    "deb": "Mend_1.0.2_amd64.deb",
-    "deb_arm": "Mend_1.0.2_arm64.deb",
-    "chromeos": "Mend_1.0.2_amd64.deb",
-    "chromeos_arm": "Mend_1.0.2_arm64.deb"
+    "windows": "Mend_1.0.3_x64-setup.exe",
+    "windows_arm": "Mend_1.0.3_arm64-setup.exe",
+    "appimage": "Mend_1.0.3_amd64.AppImage",
+    "deb": "Mend_1.0.3_amd64.deb",
+    "deb_arm": "Mend_1.0.3_arm64.deb",
+    "chromeos": "Mend_1.0.3_amd64.deb",
+    "chromeos_arm": "Mend_1.0.3_arm64.deb"
   }
 }
