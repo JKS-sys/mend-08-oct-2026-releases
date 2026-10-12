@@ -11,7 +11,7 @@
 <p align="center"><b>Mend — an AI repair kit for iPhone, Android, Mac, Windows, Linux and every disk</b></p>
 
 <p align="center">
-  Version <b>1.0.7</b> · released 12 Oct 2026 ·
+  Version <b>1.0.8</b> · released 12 Oct 2026 ·
   <a href="https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest">Download</a> ·
   <a href="https://ipconfig.co.network/mend">Website</a> ·
   <a href="RELEASE-NOTES.md">Release notes</a>
@@ -92,6 +92,29 @@ and old ones are **cleaned** by count and age. Point the backups folder at an ex
 **Messages, WhatsApp and everything else** export as CSV or HTML, and as an **evidence report** for court or
 compliance: case details, the device's serial and IMEI, SHA-256 of the source database and the backup manifest, every
 message with its metadata and attachments, page numbers and signature lines.
+
+<p align="center"><img src="demos/separate.webp" width="900" alt="Separate backups: backing up contacts, then photos with a progress bar, then every kind at once"></p>
+
+**Separate, incremental backups.** Every kind of data on every device is backed up on its own — on an iPhone or
+iPad: contacts, messages, WhatsApp, calls, notes, calendar, Safari, bookmarks, voicemail, photos and videos, music,
+ringtones, books and recordings; on Android: each contacts account, camera photos, pictures, WhatsApp media,
+downloads, documents, music, movies and recordings; on this computer: every contacts account. Each is
+**incremental**: data is saved as a new version only when it changed (every earlier version kept), and files are
+mirrored — only new or changed photos and files are copied, nothing already saved is deleted. Point it at an
+external drive or NAS.
+
+<p align="center"><img src="demos/tocloud.webp" width="900" alt="Choosing backed-up contacts from an iPhone, an Android account and a separate backup, then fixing them and adding them to iCloud"></p>
+
+**Fix backed-up contacts and add them to iCloud.** Pick contacts saved from phones — iPhone backups, Android
+accounts, separate backups, library books — and Mend fixes every problem, merges duplicates, skips people already in
+the account, saves a .vcf copy and adds the rest to your iCloud, Google or other internet account.
+
+<p align="center"><img src="demos/presence.webp" width="900" alt="Settings: choosing Menu bar only, Background only, Dock only and Dock and menu bar"></p>
+
+**Dock, menu bar or background.** Show Mend in the Dock and the menu bar, only one of them, or neither — running
+quietly in the background (taskbar and system tray on Windows and Linux). The menu-bar icon has Find a Repair,
+Checkup, Mend AI, Back Up iPhone Now, Full Disk Report and every area. With the menu-bar icon only or in the
+background, closing the window keeps Mend running; start Mend again to bring it back.
 
 <p align="center"><img src="demos/rightclick.webp" width="900" alt="Right-click menus: on the sidebar and anywhere in a screen"></p>
 
@@ -298,6 +321,11 @@ readable on every surface.
 - **Command line** — `mend devices`, `mend backup --udid all --wifi --keep 10`, `mend export messages --backup … --csv`,
   `mend files <udid> ls /DCIM` and more (Settings › Command line sets it up)
 - **15 languages** — the interface and Mend AI's answers
+- **Separate, incremental backups** — each kind of data on each device on its own; only what's new or changed is saved
+- **Contacts to iCloud** — fix backed-up contacts, merge duplicates and add them to iCloud or any internet account
+- **Dock, menu bar or background** — choose where Mend shows itself, with a menu-bar (tray) menu
+- **Backups that carry on** — a backup that drops part-way (mobilebackup2 -4) resumes by itself; the connection
+  service can be restarted from the error
 - **Right-click menus and a Dock menu** — everywhere, fitted to what's under the pointer
 - **Repair another Mac** — revive or restore an Apple silicon Mac in DFU, or repair a Mac shared as a disk
 - **Any number of devices** — every connected phone and Mac gets its own tabs and repairs run side by side
@@ -318,6 +346,8 @@ readable on every surface.
 | ![Overview](screenshots/home.png) <br> *Overview — devices, disk health, one-click fixes* | ![Fix Library](screenshots/devices.png) <br> *Fix Library — 11,570 problems, 16 kinds of device* |
 | ![Files](screenshots/files.png) <br> *Device files — browse, copy, Quick Transfer* | ![Configurator](screenshots/configurator.png) <br> *Configurator — profiles, Kiosk Mode, supervision* |
 | ![Automatic backups](screenshots/autobackup.png) <br> *Automatic backups — schedule, snapshots, cleaning* | ![Tamil](screenshots/tamil.png) <br> *15 languages — here in Tamil* |
+| ![Separate backups](screenshots/separate.png) <br> *Separate backups — each kind on its own, incremental* | ![Contacts to iCloud](screenshots/tocloud.png) <br> *Fix backed-up contacts and add them to iCloud* |
+| ![Settings](screenshots/presence.png) <br> *Dock, menu bar or background* | |
 | ![iPhone](screenshots/ios.png) <br> *iPhone & iPad — Recovery Mode, repair, backups* | ![Android](screenshots/android.png) <br> *Android — Recovery, Fastboot, OTA repair* |
 | ![Disks](screenshots/disks.png) <br> *Disks & Partitions — colour map of every disk* | ![Health](screenshots/health.png) <br> *Disk Health — SMART, wear, temperature* |
 | ![Backups](screenshots/backup.png) <br> *Tiny Backups — a fraction of the size* | ![Contacts](screenshots/contacts.png) <br> *Contacts — every account side by side, nothing merged* |
@@ -358,15 +388,15 @@ irm https://ipconfig.co.network/updates/mend/install.ps1 | iex
 SmartScreen may warn on first launch: *More info → Run anyway*.
 
 The same command installs the **ARM64** build on Windows on Arm (Snapdragon / Surface Pro X and similar) —
-or download `Mend_1.0.7_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
+or download `Mend_1.0.8_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
 
 **Linux** (x86_64)
 
 - AppImage: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` — installs to `~/.local/bin/mend`.
-  Or download `Mend_1.0.7_amd64.AppImage` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest),
+  Or download `Mend_1.0.8_amd64.AppImage` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest),
   then `chmod +x Mend_*.AppImage && ./Mend_*.AppImage` (needs `libfuse2`).
 - Debian / Ubuntu: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash -s -- --deb`,
-  or download `Mend_1.0.7_amd64.deb` and `sudo apt install ./Mend_1.0.7_amd64.deb`.
+  or download `Mend_1.0.8_amd64.deb` and `sudo apt install ./Mend_1.0.8_amd64.deb`.
 
 **Linux ARM64** (Raspberry Pi 4/5 with a 64-bit OS, ARM laptops and servers) — Debian / Ubuntu:
 
@@ -374,7 +404,7 @@ or download `Mend_1.0.7_arm64-setup.exe` from the [latest release](https://githu
 curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
 ```
 
-or download `Mend_1.0.7_arm64.deb` and `sudo apt install ./Mend_1.0.7_arm64.deb`.
+or download `Mend_1.0.8_arm64.deb` and `sudo apt install ./Mend_1.0.8_arm64.deb`.
 ARM64 Linux has a .deb only — there is no ARM AppImage.
 
 **ChromeOS** — Mend runs in the Linux development environment (a Debian container), on Intel/AMD and ARM Chromebooks:
@@ -385,8 +415,8 @@ ARM64 Linux has a .deb only — there is no ARM AppImage.
    curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
    ```
    Or by hand: `dpkg --print-architecture` says `amd64` (Intel/AMD) or `arm64` (ARM). Download
-   `Mend_1.0.7_amd64.deb` or `Mend_1.0.7_arm64.deb`, move it to **Linux files**, then double-click it —
-   or run `sudo apt install ./Mend_1.0.7_<arch>.deb`.
+   `Mend_1.0.8_amd64.deb` or `Mend_1.0.8_arm64.deb`, move it to **Linux files**, then double-click it —
+   or run `sudo apt install ./Mend_1.0.8_<arch>.deb`.
 3. Open Mend from the launcher (**Linux apps**). ChromeOS limits USB passthrough, so phone repair and SMART may not
    reach devices; backups, contacts and the AI work fully. Share folders with Linux from the Files app.
 
@@ -397,8 +427,8 @@ pkg install webkit2-gtk_41 libimobiledevice smartmontools bash curl
 curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
 ```
 
-Or download `Mend_1.0.7_freebsd_amd64.tar.gz` and, in the download folder,
-`tar -xzf Mend_1.0.7_freebsd_amd64.tar.gz && sudo sh install.sh` — it installs to `/usr/local/bin/mend`
+Or download `Mend_1.0.8_freebsd_amd64.tar.gz` and, in the download folder,
+`tar -xzf Mend_1.0.8_freebsd_amd64.tar.gz && sudo sh install.sh` — it installs to `/usr/local/bin/mend`
 with a menu entry and icon (`sh install.sh --uninstall` removes them).
 
 **Haiku** — Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
@@ -413,14 +443,14 @@ On FreeBSD, run the installer again to update.
 
 | System | CPU | Download | Updates itself |
 |---|---|---|---|
-| macOS 10.15+ | Apple silicon | `Mend_1.0.7_aarch64.dmg` | yes |
-| macOS 10.15+ | Intel | `Mend_1.0.7_x64.dmg` | yes |
-| Windows 10 / 11 | x64 | `Mend_1.0.7_x64-setup.exe` | yes |
-| Windows 11 | ARM64 | `Mend_1.0.7_arm64-setup.exe` | yes |
-| Linux | x86_64 | `Mend_1.0.7_amd64.AppImage` · `Mend_1.0.7_amd64.deb` | yes |
-| Linux | ARM64 | `Mend_1.0.7_arm64.deb` | yes |
+| macOS 10.15+ | Apple silicon | `Mend_1.0.8_aarch64.dmg` | yes |
+| macOS 10.15+ | Intel | `Mend_1.0.8_x64.dmg` | yes |
+| Windows 10 / 11 | x64 | `Mend_1.0.8_x64-setup.exe` | yes |
+| Windows 11 | ARM64 | `Mend_1.0.8_arm64-setup.exe` | yes |
+| Linux | x86_64 | `Mend_1.0.8_amd64.AppImage` · `Mend_1.0.8_amd64.deb` | yes |
+| Linux | ARM64 | `Mend_1.0.8_arm64.deb` | yes |
 | ChromeOS (Linux development environment) | x86_64 / ARM64 | the Linux `.deb` for the Chromebook's CPU | yes |
-| FreeBSD 14+ | amd64 | `Mend_1.0.7_freebsd_amd64.tar.gz` | no — rerun the installer |
+| FreeBSD 14+ | amd64 | `Mend_1.0.8_freebsd_amd64.tar.gz` | no — rerun the installer |
 | Haiku | — | not available | — |
 
 Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
