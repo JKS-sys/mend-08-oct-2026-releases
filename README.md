@@ -11,7 +11,7 @@
 <p align="center"><b>Mend — an AI repair kit for iPhone, Android, Mac, Windows, Linux and every disk</b></p>
 
 <p align="center">
-  Version <b>1.0.6</b> · released 12 Oct 2026 ·
+  Version <b>1.0.7</b> · released 12 Oct 2026 ·
   <a href="https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest">Download</a> ·
   <a href="https://ipconfig.co.network/mend">Website</a> ·
   <a href="RELEASE-NOTES.md">Release notes</a>
@@ -25,9 +25,11 @@
 Mend rescues phones and computers in one small app (a few MB): one-click Recovery Mode, iOS and Android
 system repair, Mac/Windows/Linux system and boot repair, a corrupted-settings fixer, a partition manager,
 deep disk health, tiny de-duplicated backups and a contact manager for every account — with AI that explains each step.
-It also carries a **Fix Library of 4,109 known problems** — 1,223 for iPhone & iPad, 1,159 for Mac, 1,307 for disks and 420 for contacts — each with
-colour-coded steps and the one-click repair that goes with it, a one-click **Checkup** with a score, and
-**Standard and Full Repair for macOS** as well as iOS.
+It also carries a **Fix Library of 11,570 known problems across 16 kinds of device** — iPhone, iPad, Mac, Apple Watch,
+Apple TV, AirPods, HomePod, Vision Pro, Android, Windows, Linux, ChromeOS, FreeBSD, Haiku, disks and contacts — each
+written for that model's own buttons, menus and commands, with the repair that fixes it; iMazing-style **device files,
+Configurator, app downloads, scheduled backups with snapshots and evidence-grade message exports**; a command line;
+a right-click menu everywhere and a Dock menu; and an interface in **15 languages**.
 
 ## See it in action
 
@@ -36,13 +38,73 @@ colour-coded steps and the one-click repair that goes with it, a one-click **Che
 **Startup.** The stitched ring sews itself shut, the heartbeat “M” beats twice, sparks fly and a live heartbeat line
 runs underneath — with its own synthesised sound. Any key skips it; *Reduce motion* turns it into a fade.
 
-<p align="center"><img src="demos/library.webp" width="900" alt="Fix Library: opening a fix, switching to Mac, searching for wifi keeps dropping"></p>
+<p align="center"><img src="demos/devices.webp" width="900" alt="Fix Library: switching between iPad, Apple Watch, Apple TV, Android, Windows, Linux, ChromeOS and Haiku, each with its own animated picture, then opening a Linux fix and the repair coverage"></p>
 
-**Fix Library — 4,109 known problems.** Search in your own words (“wifi keeps dropping”, “stuck on the Apple logo”),
+**16 kinds of device, 11,570 problems.** Every family has its own animated picture and sound. Each problem is
+written for the exact model or system: an iPad with a Home button gets the Home-button restart, Ubuntu gets `apt`,
+Fedora `dnf`, Arch `pacman`; a Dell PC gets SupportAssist and F12, an HP gets F11 and Sure Recover; a Galaxy gets
+Smart Switch and Volume Up + Side key. “What Standard & Full Repair fix” shows the honest split — what a reinstall
+fixes, what needs an erase, and what needs steps or a part instead.
+
+| | Problems | Standard Repair fixes | Full Repair fixes |
+|---|---:|---:|---:|
+| iPhone | 1,223 | 1,118 | 1,126 |
+| iPad (21 model families) | 1,656 | 893 | 1,061 |
+| Mac | 1,159 | 1,107 | 1,115 |
+| Apple Watch (13 models) | 429 | 26 | 117 |
+| Apple TV · AirPods · HomePod · Vision Pro | 223 | 2 | 41 |
+| Android (12 makers) | 672 | 156 | 252 |
+| Windows 10 / 11 / 11 on Arm × 9 PC makers | 1,750 | 876 | 1,001 |
+| Linux (16 distributions) | 955 | 426 | 461 |
+| ChromeOS · FreeBSD · Haiku | 44 | 10 | 20 |
+| Disks (13 kinds of drive × 11 file systems) | 3,039 | 2,520 | 3,000 |
+| Contacts | 420 | 336 | 420 |
+
+<p align="center"><img src="demos/library.webp" width="900" alt="Fix Library: opening a fix, ticking steps, switching to Mac, searching for beach ball when opening apps"></p>
+
+**Fix Library.** Search in your own words (“wifi keeps dropping”, “stuck on the Apple logo”),
 filter by colour-coded category, open a fix and tick off the numbered steps as you go. Star the fixes you want to keep,
 mark a problem “It's fixed!” and copy the steps to send to someone. Menus and paths are blue with violet ›,
 keys and buttons are gold, numbers are cyan, *keeps your data* is green and *erases* is red — so you can tell what
 a step does before reading it. The buttons under each fix run the matching repair.
+
+<p align="center"><img src="demos/files.webp" width="900" alt="Device files: opening Photos, selecting three pictures, the right-click menu, then browsing inside the VLC app"></p>
+
+**Device files, like iMazing.** Browse the iPhone or iPad like a drive — photos and videos, music files, ringtones,
+books, recordings — over USB or Wi-Fi. Copy anything to the computer, and **Quick Transfer** files or whole folders
+onto the device or straight into an app's Documents (VLC, Documents, any Files-compatible app). New folders, rename,
+delete, a right-click menu, and the free space as a bar.
+
+<p align="center"><img src="demos/manage.webp" width="900" alt="Configurator: turning on Wi-Fi, restrictions and Kiosk Mode, then the colour-coded XML of the profile"></p>
+
+**Configurator.** Build Apple configuration profiles — Wi-Fi, 16 restrictions, Kiosk Mode (Single App), web clips,
+passcode rules — see the colour-coded XML, save the .mobileconfig, sign it with a certificate from your keychain and
+install it on one device or every connected one (Apple Configurator on a Mac). Supervise a freshly erased device,
+remove profiles, and back up, install an .ipa on, or restart every connected device at once. The Apps tab downloads
+App Store apps as **.ipa** files with your own Apple Account (ipatool) and installs them on any of your devices.
+
+<p align="center"><img src="demos/autobackup.webp" width="900" alt="Automatic backups: turning on a daily Wi-Fi schedule, taking a snapshot, archiving one and cleaning old ones"></p>
+
+**Automatic backups with snapshots.** Daily or weekly, over USB or Wi-Fi, for one device or every connected one — even
+while Mend is closed (launchd on a Mac, a systemd timer on Linux, Task Scheduler on Windows). Each backup keeps a
+**snapshot** (an APFS clone on a Mac, so unchanged files take no extra space), snapshots you archive are kept forever,
+and old ones are **cleaned** by count and age. Point the backups folder at an external drive or a NAS.
+**Messages, WhatsApp and everything else** export as CSV or HTML, and as an **evidence report** for court or
+compliance: case details, the device's serial and IMEI, SHA-256 of the source database and the backup manifest, every
+message with its metadata and attachments, page numbers and signature lines.
+
+<p align="center"><img src="demos/rightclick.webp" width="900" alt="Right-click menus: on the sidebar and anywhere in a screen"></p>
+
+**Right-click anywhere.** The menu fits what's under the pointer — text fields (cut, copy, paste), selected text
+(ask Mend AI, find fixes, search the web), logs and code (copy all, save, explain), sidebar places, fixes — plus every
+app command. Right-click Mend in the **Dock** for Find a Repair, Checkup, Mend AI, each area, Back Up iPhone Now and
+Full Disk Report. Closing the window (or ⌘W) quits Mend completely, stopping anything still running.
+
+<p align="center"><img src="demos/languages.webp" width="900" alt="Settings: switching the interface between German, Japanese, Tamil, Hindi and Spanish"></p>
+
+**15 languages.** English, Deutsch, Français, Español, Italiano, Português, Українська, Русский, العربية, 日本語,
+한국어, 简体中文, 繁體中文, हिन्दी and தமிழ் — menus, tabs and buttons switch instantly, and Mend AI answers in your
+language. (Long help text and the Fix Library stay in English; Mend AI explains any of it in yours.)
 
 <p align="center"><img src="demos/checkup.webp" width="900" alt="Checkup: a radar sweep while Mend checks disks, storage, memory, security, battery and phones, then a score with Fix buttons"></p>
 
@@ -225,22 +287,37 @@ readable on every surface.
   library; .vcf / .csv / .ldif files. Every field, phone-number details for every country, groups, birthdays (.ics),
   fix 16 kinds of problem, merge duplicates, copy or move anywhere
 - **iPhone data** — Messages, WhatsApp, calls, contacts, notes, Safari, calendar and voicemail from a backup, exported
-  as CSV or HTML; photos, voice memos and WhatsApp media; MVT spyware check; transfer to another iPhone
+  as CSV, HTML or an **evidence report** (hashes, device identity, metadata, attachments, page numbers); photos,
+  message attachments, voice memos, voicemail, WhatsApp media, notes attachments, ringtones and books; MVT spyware
+  check; transfer to another iPhone
+- **Device files** — browse an iPhone or iPad like a drive over USB or Wi-Fi; copy both ways; Quick Transfer into apps
+- **Configurator** — build, sign and install configuration profiles (Wi-Fi, restrictions, Kiosk Mode, web clips,
+  passcode); supervise; act on every connected device at once
+- **App downloads** — App Store apps as .ipa files with your own Apple Account, installed on any of your devices
+- **Automatic backups** — scheduled (even with Mend closed), Wi-Fi, snapshots, archiving, automatic cleaning, any drive or NAS
+- **Command line** — `mend devices`, `mend backup --udid all --wifi --keep 10`, `mend export messages --backup … --csv`,
+  `mend files <udid> ls /DCIM` and more (Settings › Command line sets it up)
+- **15 languages** — the interface and Mend AI's answers
+- **Right-click menus and a Dock menu** — everywhere, fitted to what's under the pointer
 - **Repair another Mac** — revive or restore an Apple silicon Mac in DFU, or repair a Mac shared as a disk
 - **Any number of devices** — every connected phone and Mac gets its own tabs and repairs run side by side
-- **Fix Library** — 1,223 iPhone & iPad, 1,159 Mac, 1,307 disk and 420 contact problems with steps and one-click repairs; tick off steps, save
-  fixes, mark them fixed, copy steps; also searchable from ⌘K
+- **Fix Library** — 11,570 problems for 16 kinds of device (iPhone, iPad, Mac, Apple Watch, Apple TV, AirPods,
+  HomePod, Vision Pro, Android, Windows, Linux, ChromeOS, FreeBSD, Haiku, disks, contacts), each written for that
+  model's buttons, menus and commands; tick off steps, save fixes, mark them fixed, copy steps; also searchable from ⌘K
 - **Checkup** — a scored, read-only health check of this computer, its disks and connected phones, with Fix buttons
 - **Repair report** — export the checkup, devices, disks, fixed problems and recent repairs as Markdown
-- **Colour-coded everything** — paths, keys, numbers, brackets, file names, commands and log lines each have their own colour (no pink)
+- **Colour-coded everything** — paths, keys, numbers, brackets, file names, commands to type, device and system names,
+  XML and log lines each have their own colour (no pink), in every screen, tab and menu
 - **Sounds and motion** — a heartbeat startup show, animated illustrations, a repair that stitches itself shut,
-  plug-in chimes, 70+ synthesised sounds and ten sound packs; light and dark themes
+  an animated picture for every device family, plug-in chimes, 100+ synthesised sounds and ten sound packs; light and dark themes
 
 ## Screenshots
 
 | | |
 |---|---|
-| ![Overview](screenshots/home.png) <br> *Overview — devices, disk health, one-click fixes* | ![Fix Library](screenshots/library.png) <br> *Fix Library — 4,109 known problems, colour-coded steps* |
+| ![Overview](screenshots/home.png) <br> *Overview — devices, disk health, one-click fixes* | ![Fix Library](screenshots/devices.png) <br> *Fix Library — 11,570 problems, 16 kinds of device* |
+| ![Files](screenshots/files.png) <br> *Device files — browse, copy, Quick Transfer* | ![Configurator](screenshots/configurator.png) <br> *Configurator — profiles, Kiosk Mode, supervision* |
+| ![Automatic backups](screenshots/autobackup.png) <br> *Automatic backups — schedule, snapshots, cleaning* | ![Tamil](screenshots/tamil.png) <br> *15 languages — here in Tamil* |
 | ![iPhone](screenshots/ios.png) <br> *iPhone & iPad — Recovery Mode, repair, backups* | ![Android](screenshots/android.png) <br> *Android — Recovery, Fastboot, OTA repair* |
 | ![Disks](screenshots/disks.png) <br> *Disks & Partitions — colour map of every disk* | ![Health](screenshots/health.png) <br> *Disk Health — SMART, wear, temperature* |
 | ![Backups](screenshots/backup.png) <br> *Tiny Backups — a fraction of the size* | ![Contacts](screenshots/contacts.png) <br> *Contacts — every account side by side, nothing merged* |
@@ -253,7 +330,7 @@ readable on every surface.
 ## Helpers
 
 Mend drives free, open tools for phones and SMART data. It shows what's missing and opens a terminal with the install command:
-macOS `brew install libimobiledevice libirecovery ideviceinstaller smartmontools` (idevicerestore isn't in Homebrew: Mend builds it for you, or uses Apple Configurator) and
+macOS `brew install libimobiledevice libirecovery ideviceinstaller smartmontools ipatool` (idevicerestore and afcclient for device files come with the newest libimobiledevice, which Mend builds for you; Apple Configurator adds profiles and supervision) and
 `brew install --cask android-platform-tools`; Debian/Ubuntu `sudo apt install libimobiledevice-utils ideviceinstaller idevicerestore usbmuxd smartmontools adb fastboot`;
 Windows `winget install smartmontools.smartmontools Google.PlatformTools`.
 
@@ -281,15 +358,15 @@ irm https://ipconfig.co.network/updates/mend/install.ps1 | iex
 SmartScreen may warn on first launch: *More info → Run anyway*.
 
 The same command installs the **ARM64** build on Windows on Arm (Snapdragon / Surface Pro X and similar) —
-or download `Mend_1.0.6_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
+or download `Mend_1.0.7_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
 
 **Linux** (x86_64)
 
 - AppImage: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` — installs to `~/.local/bin/mend`.
-  Or download `Mend_1.0.6_amd64.AppImage` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest),
+  Or download `Mend_1.0.7_amd64.AppImage` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest),
   then `chmod +x Mend_*.AppImage && ./Mend_*.AppImage` (needs `libfuse2`).
 - Debian / Ubuntu: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash -s -- --deb`,
-  or download `Mend_1.0.6_amd64.deb` and `sudo apt install ./Mend_1.0.6_amd64.deb`.
+  or download `Mend_1.0.7_amd64.deb` and `sudo apt install ./Mend_1.0.7_amd64.deb`.
 
 **Linux ARM64** (Raspberry Pi 4/5 with a 64-bit OS, ARM laptops and servers) — Debian / Ubuntu:
 
@@ -297,7 +374,7 @@ or download `Mend_1.0.6_arm64-setup.exe` from the [latest release](https://githu
 curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
 ```
 
-or download `Mend_1.0.6_arm64.deb` and `sudo apt install ./Mend_1.0.6_arm64.deb`.
+or download `Mend_1.0.7_arm64.deb` and `sudo apt install ./Mend_1.0.7_arm64.deb`.
 ARM64 Linux has a .deb only — there is no ARM AppImage.
 
 **ChromeOS** — Mend runs in the Linux development environment (a Debian container), on Intel/AMD and ARM Chromebooks:
@@ -308,8 +385,8 @@ ARM64 Linux has a .deb only — there is no ARM AppImage.
    curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
    ```
    Or by hand: `dpkg --print-architecture` says `amd64` (Intel/AMD) or `arm64` (ARM). Download
-   `Mend_1.0.6_amd64.deb` or `Mend_1.0.6_arm64.deb`, move it to **Linux files**, then double-click it —
-   or run `sudo apt install ./Mend_1.0.6_<arch>.deb`.
+   `Mend_1.0.7_amd64.deb` or `Mend_1.0.7_arm64.deb`, move it to **Linux files**, then double-click it —
+   or run `sudo apt install ./Mend_1.0.7_<arch>.deb`.
 3. Open Mend from the launcher (**Linux apps**). ChromeOS limits USB passthrough, so phone repair and SMART may not
    reach devices; backups, contacts and the AI work fully. Share folders with Linux from the Files app.
 
@@ -320,8 +397,8 @@ pkg install webkit2-gtk_41 libimobiledevice smartmontools bash curl
 curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
 ```
 
-Or download `Mend_1.0.6_freebsd_amd64.tar.gz` and, in the download folder,
-`tar -xzf Mend_1.0.6_freebsd_amd64.tar.gz && sudo sh install.sh` — it installs to `/usr/local/bin/mend`
+Or download `Mend_1.0.7_freebsd_amd64.tar.gz` and, in the download folder,
+`tar -xzf Mend_1.0.7_freebsd_amd64.tar.gz && sudo sh install.sh` — it installs to `/usr/local/bin/mend`
 with a menu entry and icon (`sh install.sh --uninstall` removes them).
 
 **Haiku** — Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
@@ -336,14 +413,14 @@ On FreeBSD, run the installer again to update.
 
 | System | CPU | Download | Updates itself |
 |---|---|---|---|
-| macOS 10.15+ | Apple silicon | `Mend_1.0.6_aarch64.dmg` | yes |
-| macOS 10.15+ | Intel | `Mend_1.0.6_x64.dmg` | yes |
-| Windows 10 / 11 | x64 | `Mend_1.0.6_x64-setup.exe` | yes |
-| Windows 11 | ARM64 | `Mend_1.0.6_arm64-setup.exe` | yes |
-| Linux | x86_64 | `Mend_1.0.6_amd64.AppImage` · `Mend_1.0.6_amd64.deb` | yes |
-| Linux | ARM64 | `Mend_1.0.6_arm64.deb` | yes |
+| macOS 10.15+ | Apple silicon | `Mend_1.0.7_aarch64.dmg` | yes |
+| macOS 10.15+ | Intel | `Mend_1.0.7_x64.dmg` | yes |
+| Windows 10 / 11 | x64 | `Mend_1.0.7_x64-setup.exe` | yes |
+| Windows 11 | ARM64 | `Mend_1.0.7_arm64-setup.exe` | yes |
+| Linux | x86_64 | `Mend_1.0.7_amd64.AppImage` · `Mend_1.0.7_amd64.deb` | yes |
+| Linux | ARM64 | `Mend_1.0.7_arm64.deb` | yes |
 | ChromeOS (Linux development environment) | x86_64 / ARM64 | the Linux `.deb` for the Chromebook's CPU | yes |
-| FreeBSD 14+ | amd64 | `Mend_1.0.6_freebsd_amd64.tar.gz` | no — rerun the installer |
+| FreeBSD 14+ | amd64 | `Mend_1.0.7_freebsd_amd64.tar.gz` | no — rerun the installer |
 | Haiku | — | not available | — |
 
 Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
