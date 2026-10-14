@@ -11,11 +11,13 @@
 <p align="center"><b>Mend — an AI repair kit for iPhone, Android, Mac, Windows, Linux and every disk</b></p>
 
 <p align="center">
-  Version <b>1.0.9</b> · released 13 Oct 2026 ·
+  Version <b>1.0.10</b> · released 14 Oct 2026 ·
   <a href="https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest">Download</a> ·
   <a href="https://ipconfig.co.network/mend">Website</a> ·
   <a href="RELEASE-NOTES.md">Release notes</a>
 </p>
+
+<p align="center">⭐ <b>If Mend helps you, please give this repository a star</b> — it is the one thing that tells other people the app is worth a look, and it keeps the project going.</p>
 
 <p align="center">
   <img src="icon-512.png" width="96" height="96" alt="Mend icon, dark">&nbsp;&nbsp;
@@ -25,9 +27,9 @@
 Mend rescues phones and computers in one small app (a few MB): one-click Recovery Mode, iOS and Android
 system repair, Mac/Windows/Linux system and boot repair, a corrupted-settings fixer, a partition manager,
 deep disk health, tiny de-duplicated backups and a contact manager for every account — with AI that explains each step.
-It also carries a **Fix Library of 15,003 known problems across 16 kinds of device** — iPhone, iPad, Mac, Apple Watch,
+It also carries a **Fix Library of 16,826 known problems across 16 kinds of device** — iPhone, iPad, Mac, Apple Watch,
 Apple TV, AirPods, HomePod, Vision Pro, Android, Windows, Linux, ChromeOS, FreeBSD, Haiku, disks and contacts — each
-written for that model's own buttons, menus and commands, with the repair that fixes it; iMazing-style **device files,
+written for that model's own buttons, menus and commands, with the repair that fixes it; **device files,
 Configurator, app downloads, scheduled backups with snapshots and evidence-grade message exports**; a command line;
 a right-click menu everywhere and a Dock menu; and an interface in **15 languages**.
 
@@ -55,7 +57,7 @@ runs underneath — with its own synthesised sound. Any key skips it; *Reduce mo
 
 <p align="center"><img src="demos/devices.webp" width="900" alt="Fix Library: switching between iPad, Apple Watch, Apple TV, Android, Windows, Linux, ChromeOS and Haiku, each with its own animated picture, then opening a Linux fix and the repair coverage"></p>
 
-**16 kinds of device, 15,003 problems.** Every family has its own animated picture and sound. Each problem is
+**16 kinds of device, 16,826 problems.** Every family has its own animated picture and sound. Each problem is
 written for the exact model or system: an iPad with a Home button gets the Home-button restart, Ubuntu gets `apt`,
 Fedora `dnf`, Arch `pacman`; a Dell PC gets SupportAssist and F12, an HP gets F11 and Sure Recover; a Galaxy gets
 Smart Switch and Volume Up + Side key. “What Standard & Full Repair fix” shows the honest split — what a reinstall
@@ -85,7 +87,7 @@ a step does before reading it. The buttons under each fix run the matching repai
 
 <p align="center"><img src="demos/files.webp" width="900" alt="Device files: opening Photos, selecting three pictures, the right-click menu, then browsing inside the VLC app"></p>
 
-**Device files, like iMazing.** Browse the iPhone or iPad like a drive — photos and videos, music files, ringtones,
+**Device files.** Browse the iPhone or iPad like a drive — photos and videos, music files, ringtones,
 books, recordings — over USB or Wi-Fi. Copy anything to the computer, and **Quick Transfer** files or whole folders
 onto the device or straight into an app's Documents (VLC, Documents, any Files-compatible app). New folders, rename,
 delete, a right-click menu, and the free space as a bar.
@@ -185,11 +187,15 @@ test and a full read scan.
 
 <p align="center"><img src="demos/diskreport.webp" width="900" alt="Full disk report: health and lifetime gauges, years left, endurance, temperature bar, read/write statistics and every SMART indicator"></p>
 
-**Full disk report — more than DriveDx.** Every SMART and NVMe indicator with its status, plus health and
+**Full disk report.** Every SMART and NVMe indicator with its status, plus health and
 lifetime-left gauges, years left at 8 hours a day, projected endurance, data written per powered-on day,
 temperature against its limits, read/write statistics since start-up, errors and retries — and each finding comes
 with the repair that fixes it: remap bad sectors, a write test that forces remapping, TRIM, self-tests, or the
-memory and process checks behind heavy daily writing. Export it as text, Markdown or a web page.
+memory and process checks behind heavy daily writing. A four-state **SMART status** — OK · Warning · Failing · Failed —
+stands beside the gauges, and a drive that gives no SMART data (many USB enclosures) says *no data*, never “100 % good”.
+Export it as text, Markdown or a web page — one report for all disks, or **Save report** on each disk card and
+**Save each disk** for one file per drive. Hard-disk extras: the drive's temperature history as a sparkline, **Stop head
+parking** (APM 254) when the heads park many times an hour, stop the spin-down timer, turn the write cache on.
 
 <p align="center"><img src="screenshots/hddlife.png" width="900" alt="Hard-disk life estimate: age, head parking and start-stop counts as bars, with the lowest setting the estimate"></p>
 
@@ -357,7 +363,7 @@ readable on every surface.
 - **Right-click menus and a Dock menu** — everywhere, fitted to what's under the pointer
 - **Repair another Mac** — revive or restore an Apple silicon Mac in DFU, or repair a Mac shared as a disk
 - **Any number of devices** — every connected phone and Mac gets its own tabs and repairs run side by side
-- **Fix Library** — 15,003 problems for 16 kinds of device (iPhone, iPad, Mac, Apple Watch, Apple TV, AirPods,
+- **Fix Library** — 16,826 problems for 16 kinds of device (iPhone, iPad, Mac, Apple Watch, Apple TV, AirPods,
   HomePod, Vision Pro, Android, Windows, Linux, ChromeOS, FreeBSD, Haiku, disks, contacts), each written for that
   model's buttons, menus and commands; tick off steps, save fixes, mark them fixed, copy steps; also searchable from ⌘K
 - **Checkup** — a scored, read-only health check of this computer, its disks and connected phones, with Fix buttons
@@ -367,11 +373,15 @@ readable on every surface.
 - **Sounds and motion** — a heartbeat startup show, animated illustrations, a repair that stitches itself shut,
   an animated picture for every device family, plug-in chimes, 100+ synthesised sounds and ten sound packs; light and dark themes
 
+**AI tidy for contacts.** Names like `RAVI KUMAR WORK NEW 2024 🔥` become `Ravi Kumar`; a six-line note becomes
+two lines that still carry every number, date and amount — proposed by the AI you chose (a local model on your Mac
+keeps everything on the computer), shown as before → after rows you tick before anything is saved.
+
 ## Screenshots
 
 | | |
 |---|---|
-| ![Overview](screenshots/home.png) <br> *Overview — devices, disk health, one-click fixes* | ![Fix Library](screenshots/devices.png) <br> *Fix Library — 15,003 problems, 16 kinds of device* |
+| ![Overview](screenshots/home.png) <br> *Overview — devices, disk health, one-click fixes* | ![Fix Library](screenshots/devices.png) <br> *Fix Library — 16,826 problems, 16 kinds of device* |
 | ![Files](screenshots/files.png) <br> *Device files — browse, copy, Quick Transfer* | ![Configurator](screenshots/configurator.png) <br> *Configurator — profiles, Kiosk Mode, supervision* |
 | ![Automatic backups](screenshots/autobackup.png) <br> *Automatic backups — schedule, snapshots, cleaning* | ![Tamil](screenshots/tamil.png) <br> *15 languages — here in Tamil* |
 | ![Separate backups](screenshots/separate.png) <br> *Separate backups — each kind on its own, incremental* | ![Contacts to iCloud](screenshots/tocloud.png) <br> *Fix backed-up contacts and add them to iCloud* |
@@ -395,91 +405,61 @@ Windows `winget install smartmontools.smartmontools Google.PlatformTools`.
 
 ## Install
 
-**macOS** (Apple silicon and Intel) — Terminal:
+**One way for every system — Pour.** Pour is the package manager for ipconfig.co.network apps; the first line installs
+Pour, the second installs Mend (and later `pour upgrade mend` updates it):
 
 ```bash
-curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
+curl -fsSL https://ipconfig.co.network/pour/install | sh
+pour install --cask mend
 ```
 
-The installer picks the right build, copies **Mend.app** to `/Applications` and clears the quarantine flag.
-If you install from the DMG by hand instead, run this once before the first launch:
-
-```bash
-xattr -cr /Applications/Mend.app
-```
-
-**Windows** — PowerShell:
+That works on **macOS** (Apple silicon and Intel), **Linux** (x86_64 and ARM64, AppImage or .deb), **ChromeOS** (inside the
+Linux development environment) and **FreeBSD**. On **Windows** download
+[pour-windows-x86_64.exe](https://ipconfig.co.network/pour/install?os=windows) (or run `irm https://ipconfig.co.network/pour/install.ps1 | iex` in PowerShell), then:
 
 ```powershell
-irm https://ipconfig.co.network/updates/mend/install.ps1 | iex
+pour install --cask mend
 ```
 
-SmartScreen may warn on first launch: *More info → Run anyway*.
+`pour apps` lists everything Pour can install; `pour remove mend` uninstalls. There is no Homebrew formula, cask or tap for Mend.
 
-The same command installs the **ARM64** build on Windows on Arm (Snapdragon / Surface Pro X and similar) —
-or download `Mend_1.0.9_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
+**If you'd rather not use Pour** — Mend's own one-line installer or a plain download:
 
-**Linux** (x86_64)
-
-- AppImage: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` — installs to `~/.local/bin/mend`.
-  Or download `Mend_1.0.9_amd64.AppImage` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest),
-  then `chmod +x Mend_*.AppImage && ./Mend_*.AppImage` (needs `libfuse2`).
-- Debian / Ubuntu: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash -s -- --deb`,
-  or download `Mend_1.0.9_amd64.deb` and `sudo apt install ./Mend_1.0.9_amd64.deb`.
-
-**Linux ARM64** (Raspberry Pi 4/5 with a 64-bit OS, ARM laptops and servers) — Debian / Ubuntu:
-
-```bash
-curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
-```
-
-or download `Mend_1.0.9_arm64.deb` and `sudo apt install ./Mend_1.0.9_arm64.deb`.
-ARM64 Linux has a .deb only — there is no ARM AppImage.
-
-**ChromeOS** — Mend runs in the Linux development environment (a Debian container), on Intel/AMD and ARM Chromebooks:
-
-1. **Settings → Advanced → Developers → Linux development environment → Turn on** (a few minutes the first time).
-2. Open the **Terminal** app and run the installer — it picks the right package for your Chromebook:
-   ```bash
-   curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
-   ```
-   Or by hand: `dpkg --print-architecture` says `amd64` (Intel/AMD) or `arm64` (ARM). Download
-   `Mend_1.0.9_amd64.deb` or `Mend_1.0.9_arm64.deb`, move it to **Linux files**, then double-click it —
-   or run `sudo apt install ./Mend_1.0.9_<arch>.deb`.
-3. Open Mend from the launcher (**Linux apps**). ChromeOS limits USB passthrough, so phone repair and SMART may not
-   reach devices; backups, contacts and the AI work fully. Share folders with Linux from the Files app.
-
-**FreeBSD** (amd64, FreeBSD 14 or later, with a desktop) — as root:
-
-```sh
-pkg install webkit2-gtk_41 libimobiledevice smartmontools bash curl
-curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash
-```
-
-Or download `Mend_1.0.9_freebsd_amd64.tar.gz` and, in the download folder,
-`tar -xzf Mend_1.0.9_freebsd_amd64.tar.gz && sudo sh install.sh` — it installs to `/usr/local/bin/mend`
-with a menu entry and icon (`sh install.sh --uninstall` removes them).
-
-**Haiku** — Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
-
-**Homebrew** — Homebrew without a tap needs an Apple-notarized app; Mend is ad-hoc signed today, so use the curl installer.
+- **macOS** — Terminal: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` copies **Mend.app** to `/Applications`
+  and clears the quarantine flag. From the DMG by hand instead: run `xattr -cr /Applications/Mend.app` once before the first launch.
+- **Windows** — PowerShell: `irm https://ipconfig.co.network/updates/mend/install.ps1 | iex`. SmartScreen may warn on first launch:
+  *More info → Run anyway*. The same command installs the **ARM64** build on Windows on Arm (Snapdragon / Surface Pro X and similar) —
+  or download `Mend_1.0.10_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
+- **Linux x86_64** — AppImage: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` (installs to `~/.local/bin/mend`),
+  or download `Mend_1.0.10_amd64.AppImage`, then `chmod +x Mend_*.AppImage && ./Mend_*.AppImage` (needs `libfuse2`).
+  Debian / Ubuntu: `… | bash -s -- --deb`, or `sudo apt install ./Mend_1.0.10_amd64.deb`.
+- **Linux ARM64** (Raspberry Pi 4/5 with a 64-bit OS, ARM laptops and servers) — the same installer line picks `Mend_1.0.10_arm64.deb`
+  (`sudo apt install ./Mend_1.0.10_arm64.deb` by hand). ARM64 Linux has a .deb only — there is no ARM AppImage.
+- **ChromeOS** — **Settings → Advanced → Developers → Linux development environment → Turn on**, open the **Terminal** app and run
+  the Pour lines above (or the installer line — it reads `dpkg --print-architecture` and picks `amd64` or `arm64`). Open Mend from
+  the launcher (**Linux apps**). ChromeOS limits USB passthrough, so phone repair and SMART may not reach devices; backups,
+  contacts and the AI work fully. Share folders with Linux from the Files app.
+- **FreeBSD** (amd64, FreeBSD 14 or later, with a desktop) — as root: `pkg install webkit2-gtk_41 libimobiledevice smartmontools bash curl`,
+  then the Pour lines or the installer line. By hand: `tar -xzf Mend_1.0.10_freebsd_amd64.tar.gz && sudo sh install.sh`
+  installs to `/usr/local/bin/mend` with a menu entry and icon (`sh install.sh --uninstall` removes them).
+- **Haiku** — Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
 
 Mend updates itself on macOS, Windows (x64 and ARM64) and Linux (AppImage and .deb, x86_64 and ARM64): when a new
 version is out it offers to install it and restart. A .deb update asks for your password, like any package install.
-On FreeBSD, run the installer again to update.
+On FreeBSD, run `pour upgrade mend` (or the installer again) to update.
 
 ## Platforms
 
 | System | CPU | Download | Updates itself |
 |---|---|---|---|
-| macOS 10.15+ | Apple silicon | `Mend_1.0.9_aarch64.dmg` | yes |
-| macOS 10.15+ | Intel | `Mend_1.0.9_x64.dmg` | yes |
-| Windows 10 / 11 | x64 | `Mend_1.0.9_x64-setup.exe` | yes |
-| Windows 11 | ARM64 | `Mend_1.0.9_arm64-setup.exe` | yes |
-| Linux | x86_64 | `Mend_1.0.9_amd64.AppImage` · `Mend_1.0.9_amd64.deb` | yes |
-| Linux | ARM64 | `Mend_1.0.9_arm64.deb` | yes |
+| macOS 10.15+ | Apple silicon | `Mend_1.0.10_aarch64.dmg` | yes |
+| macOS 10.15+ | Intel | `Mend_1.0.10_x64.dmg` | yes |
+| Windows 10 / 11 | x64 | `Mend_1.0.10_x64-setup.exe` | yes |
+| Windows 11 | ARM64 | `Mend_1.0.10_arm64-setup.exe` | yes |
+| Linux | x86_64 | `Mend_1.0.10_amd64.AppImage` · `Mend_1.0.10_amd64.deb` | yes |
+| Linux | ARM64 | `Mend_1.0.10_arm64.deb` | yes |
 | ChromeOS (Linux development environment) | x86_64 / ARM64 | the Linux `.deb` for the Chromebook's CPU | yes |
-| FreeBSD 14+ | amd64 | `Mend_1.0.9_freebsd_amd64.tar.gz` | no — rerun the installer |
+| FreeBSD 14+ | amd64 | `Mend_1.0.10_freebsd_amd64.tar.gz` | no — rerun the installer |
 | Haiku | — | not available | — |
 
 Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port, so there is no installer to build —
@@ -500,6 +480,8 @@ After paying you get an activation code at once; in Mend open **Activate Pro** a
 [Get Mend Pro →](https://ipconfig.co.network/mend/buy?plan=monthly) · [yearly](https://ipconfig.co.network/mend/buy?plan=yearly)
 
 ## Links
+
+⭐ Found Mend useful? **Star this repository** — it helps others find it.
 
 - Releases and downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases
 - Website: https://ipconfig.co.network/mend
