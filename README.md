@@ -11,7 +11,7 @@
 <p align="center"><b>Mend — an AI repair kit for iPhone, Android, Mac, Windows, Linux and every disk</b></p>
 
 <p align="center">
-  Version <b>1.0.12</b> · released 15 Oct 2026 ·
+  Version <b>1.0.13</b> · released 15 Oct 2026 ·
   <a href="https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest">Download</a> ·
   <a href="https://ipconfig.co.network/mend">Website</a> ·
   <a href="RELEASE-NOTES.md">Release notes</a>
@@ -27,7 +27,7 @@
 Mend rescues phones and computers in one small app (a few MB): one-click Recovery Mode, iOS and Android
 system repair, Mac/Windows/Linux system and boot repair, a corrupted-settings fixer, a partition manager,
 deep disk health, tiny de-duplicated backups and a contact manager for every account — with AI that explains each step.
-It also carries a **Fix Library of 16,826 known problems across 16 kinds of device** — iPhone, iPad, Mac, Apple Watch,
+It also carries a **Fix Library of 17,572 known problems across 16 kinds of device** — iPhone, iPad, Mac, Apple Watch,
 Apple TV, AirPods, HomePod, Vision Pro, Android, Windows, Linux, ChromeOS, FreeBSD, Haiku, disks and contacts — each
 written for that model's own buttons, menus and commands, with the repair that fixes it; **device files,
 Configurator, app downloads, scheduled backups with snapshots and evidence-grade message exports**; a command line;
@@ -57,7 +57,7 @@ runs underneath — with its own synthesised sound. Any key skips it; *Reduce mo
 
 <p align="center"><img src="demos/devices.webp" width="900" alt="Fix Library: switching between iPad, Apple Watch, Apple TV, Android, Windows, Linux, ChromeOS and Haiku, each with its own animated picture, then opening a Linux fix and the repair coverage"></p>
 
-**16 kinds of device, 16,826 problems.** Every family has its own animated picture and sound. Each problem is
+**16 kinds of device, 17,572 problems.** Every family has its own animated picture and sound. Each problem is
 written for the exact model or system: an iPad with a Home button gets the Home-button restart, Ubuntu gets `apt`,
 Fedora `dnf`, Arch `pacman`; a Dell PC gets SupportAssist and F12, an HP gets F11 and Sure Recover; a Galaxy gets
 Smart Switch and Volume Up + Side key. “What Standard & Full Repair fix” shows the honest split — what a reinstall
@@ -129,9 +129,11 @@ the account, saves a .vcf copy and adds the rest to your iCloud, Google or other
 <p align="center"><img src="demos/presence.webp" width="900" alt="Settings: choosing Menu bar only, Background only, Dock only and Dock and menu bar"></p>
 
 **Dock, menu bar or background.** Show Mend in the Dock and the menu bar, only one of them, or neither — running
-quietly in the background (taskbar and system tray on Windows and Linux). The menu-bar icon has Find a Repair,
-Checkup, Mend AI, Back Up iPhone Now, Full Disk Report and every area. With the menu-bar icon only or in the
-background, closing the window keeps Mend running; start Mend again to bring it back.
+quietly in the background (taskbar and system tray on Windows and Linux). **Left-click** the menu-bar icon for the
+quick panel — connected devices, every disk with its health, twelve one-click actions — and **right-click** it for the
+full menu: a status line, Quick Fixes, Repair, Back up, Contacts, Mend AI, Appearance, Animations, Language, Mend
+Lives In and Window & Help. Whenever Mend is in the Dock, closing the last window quits it completely; with the
+menu-bar icon only or in the background, closing the window keeps Mend running and the icon brings it back.
 
 <p align="center"><img src="demos/rightclick.webp" width="900" alt="Right-click menus: on the sidebar and anywhere in a screen"></p>
 
@@ -275,7 +277,7 @@ folder, or back up with Apple Configurator, which works with every iOS version.
 <p align="center"><img src="demos/helpers.webp" width="900" alt="Installing a helper: the missing commands are listed and Mend notices by itself when the install finishes"></p>
 
 **Helpers that set themselves up.** Mend lists exactly which free tools are missing and installs only those. If
-Homebrew already has a package, Mend links it instead of reinstalling. idevicerestore is built straight from
+Pour already has a package, Mend links it instead of reinstalling. idevicerestore is built straight from
 GitHub into your home folder, with no sudo. Mend notices by itself when an install finishes. With Apple Configurator
 installed, iPhone repair needs nothing else.
 
@@ -313,14 +315,25 @@ readable on every surface.
   seat; at the limit, deactivate another computer from the dialog; rename computers; redeem gift codes
 - **Disk Health** — used · free · total per disk with a segment per volume, general information on every card, a
   free-space threshold with desktop notifications, SMART dashboard, a rescue plan for failing disks (back up, clone
-  with ddrescue, remap, replace), read-only surface scan, self-tests (short, long, conveyance, stop, progress), the
-  drive's error log and statistics, SMART through USB bridges and the SAT driver guide for external disks on a Mac
+  with ddrescue, continue a rescue from its map, open the rescued image, remap, rewrite single bad sectors by LBA, stop
+  a failing disk freezing the computer, replace), read-only surface scan, self-tests (short, long, conveyance, offline
+  data collection, NVMe, stop, progress), ext4 bad-block lists that keep your data, NTFS bad-cluster re-checks, Btrfs and
+  ZFS scrubs, XFS, F2FS and NTFS-on-Linux repairs, the drive's error log and statistics, SMART through USB bridges and
+  the SAT driver guide for external disks on a Mac
 - **Duplicates** — identical files by content, look-alike pictures, and duplicates in cloud storages (rclone); keep
   rules; the Trash, never the last copy
 - **Notifications that open Mend** — backups, disk warnings, low free space, devices; a click opens the right page
-- **Right-click everywhere** — Finder Services (nothing to install), File Explorer verbs, GNOME Files / Dolphin /
-  Nemo / Thunar entries; menu-bar icon, Dock menu and in-app menus with Devices ▸ / Disks ▸ / Go to ▸ / Back up ▸ /
-  Repair ▸ / Appearance ▸ / Language ▸ drop-downs
+- **Right-click everywhere** — fifteen Finder Services (nothing to install): Check Disk Health, Repair Disk, Surface
+  Scan, Save Disk Health Report, Back Up, Tiny Backup Now, Free Up Space Here, Find Duplicates, Import Contacts, Fix
+  .vcf, Browse iPhone Backup, Restore iPhone from This Backup, Install on iPhone, Ask Mend AI About This, Open in Mend;
+  File Explorer verbs and GNOME Files / Dolphin / Nemo / Thunar entries; menu-bar icon (left click: quick panel; right
+  click: the full menu), Dock menu and in-app menus with Devices ▸ / Disks ▸ / Go to ▸ / Quick Fixes ▸ / Repair ▸ /
+  Back up ▸ / Contacts ▸ / Mend AI ▸ / Appearance ▸ / Animations ▸ / Language ▸ / Window & Help ▸ drop-downs
+- **Quick Fixes** — flush DNS, repair the network, restart sound, Bluetooth or the desktop, rebuild search, fonts and
+  icons, clear the print queue, sync the clock, check system files and updates — each mapped to the right repair for the
+  system Mend is running on, from the menu-bar icon, the Dock menu, the menu bar and the quick panel
+- **Updates** — Settings → Updates: the version, *Check for updates now*, the last check, and the check at start-up;
+  signed updates from ipconfig.co.network, always installed on your say-so
 - **iPhone & iPad** — Recovery Mode in and out in one click (free), Standard repair (keeps data, 1,118 problems), Deep repair
   (clean iOS, 1,126) from signed firmware verified by SHA-256, DFU guide, battery health, backups and restore, apps, screenshots, live console
 - **Android** — reboot to Recovery / Bootloader / Fastboot / Sideload, exit Fastboot, official OTA and factory-image
@@ -363,7 +376,7 @@ readable on every surface.
 - **Right-click menus and a Dock menu** — everywhere, fitted to what's under the pointer
 - **Repair another Mac** — revive or restore an Apple silicon Mac in DFU, or repair a Mac shared as a disk
 - **Any number of devices** — every connected phone and Mac gets its own tabs and repairs run side by side
-- **Fix Library** — 16,826 problems for 16 kinds of device (iPhone, iPad, Mac, Apple Watch, Apple TV, AirPods,
+- **Fix Library** — 17,572 problems for 16 kinds of device (iPhone, iPad, Mac, Apple Watch, Apple TV, AirPods,
   HomePod, Vision Pro, Android, Windows, Linux, ChromeOS, FreeBSD, Haiku, disks, contacts), each written for that
   model's buttons, menus and commands; tick off steps, save fixes, mark them fixed, copy steps; also searchable from ⌘K
 - **Checkup** — a scored, read-only health check of this computer, its disks and connected phones, with Fix buttons
@@ -381,7 +394,7 @@ keeps everything on the computer), shown as before → after rows you tick befor
 
 | | |
 |---|---|
-| ![Overview](screenshots/home.png) <br> *Overview — devices, disk health, one-click fixes* | ![Fix Library](screenshots/devices.png) <br> *Fix Library — 16,826 problems, 16 kinds of device* |
+| ![Overview](screenshots/home.png) <br> *Overview — devices, disk health, one-click fixes* | ![Fix Library](screenshots/devices.png) <br> *Fix Library — 17,572 problems, 16 kinds of device* |
 | ![Files](screenshots/files.png) <br> *Device files — browse, copy, Quick Transfer* | ![Configurator](screenshots/configurator.png) <br> *Configurator — profiles, Kiosk Mode, supervision* |
 | ![Automatic backups](screenshots/autobackup.png) <br> *Automatic backups — schedule, snapshots, cleaning* | ![Tamil](screenshots/tamil.png) <br> *15 languages — here in Tamil* |
 | ![Separate backups](screenshots/separate.png) <br> *Separate backups — each kind on its own, incremental* | ![Contacts to iCloud](screenshots/tocloud.png) <br> *Fix backed-up contacts and add them to iCloud* |
@@ -399,8 +412,8 @@ keeps everything on the computer), shown as before → after rows you tick befor
 ## Helpers
 
 Mend drives free, open tools for phones and SMART data. It shows what's missing and opens a terminal with the install command:
-macOS `brew install libimobiledevice libirecovery ideviceinstaller smartmontools ipatool` (idevicerestore and afcclient for device files come with the newest libimobiledevice, which Mend builds for you; Apple Configurator adds profiles and supervision) and
-`brew install --cask android-platform-tools`; Debian/Ubuntu `sudo apt install libimobiledevice-utils ideviceinstaller idevicerestore usbmuxd smartmontools adb fastboot`;
+macOS `pour install libimobiledevice libirecovery ideviceinstaller smartmontools ipatool` (Pour is installed first when it is missing — never Homebrew) (idevicerestore and afcclient for device files come with the newest libimobiledevice, which Mend builds for you; Apple Configurator adds profiles and supervision) and
+`pour install --cask android-platform-tools`; Debian/Ubuntu `sudo apt install libimobiledevice-utils ideviceinstaller idevicerestore usbmuxd smartmontools adb fastboot`;
 Windows `winget install smartmontools.smartmontools Google.PlatformTools`.
 
 ## Install
@@ -429,18 +442,18 @@ pour install --cask mend
   and clears the quarantine flag. From the DMG by hand instead: run `xattr -cr /Applications/Mend.app` once before the first launch.
 - **Windows** — PowerShell: `irm https://ipconfig.co.network/updates/mend/install.ps1 | iex`. SmartScreen may warn on first launch:
   *More info → Run anyway*. The same command installs the **ARM64** build on Windows on Arm (Snapdragon / Surface Pro X and similar) —
-  or download `Mend_1.0.12_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
+  or download `Mend_1.0.13_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
 - **Linux x86_64** — AppImage: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` (installs to `~/.local/bin/mend`),
-  or download `Mend_1.0.12_amd64.AppImage`, then `chmod +x Mend_*.AppImage && ./Mend_*.AppImage` (needs `libfuse2`).
-  Debian / Ubuntu: `… | bash -s -- --deb`, or `sudo apt install ./Mend_1.0.12_amd64.deb`.
-- **Linux ARM64** (Raspberry Pi 4/5 with a 64-bit OS, ARM laptops and servers) — the same installer line picks `Mend_1.0.12_arm64.deb`
-  (`sudo apt install ./Mend_1.0.12_arm64.deb` by hand). ARM64 Linux has a .deb only — there is no ARM AppImage.
+  or download `Mend_1.0.13_amd64.AppImage`, then `chmod +x Mend_*.AppImage && ./Mend_*.AppImage` (needs `libfuse2`).
+  Debian / Ubuntu: `… | bash -s -- --deb`, or `sudo apt install ./Mend_1.0.13_amd64.deb`.
+- **Linux ARM64** (Raspberry Pi 4/5 with a 64-bit OS, ARM laptops and servers) — the same installer line picks `Mend_1.0.13_arm64.deb`
+  (`sudo apt install ./Mend_1.0.13_arm64.deb` by hand). ARM64 Linux has a .deb only — there is no ARM AppImage.
 - **ChromeOS** — **Settings → Advanced → Developers → Linux development environment → Turn on**, open the **Terminal** app and run
   the Pour lines above (or the installer line — it reads `dpkg --print-architecture` and picks `amd64` or `arm64`). Open Mend from
   the launcher (**Linux apps**). ChromeOS limits USB passthrough, so phone repair and SMART may not reach devices; backups,
   contacts and the AI work fully. Share folders with Linux from the Files app.
 - **FreeBSD** (amd64, FreeBSD 14 or later, with a desktop) — as root: `pkg install webkit2-gtk_41 libimobiledevice smartmontools bash curl`,
-  then the Pour lines or the installer line. By hand: `tar -xzf Mend_1.0.12_freebsd_amd64.tar.gz && sudo sh install.sh`
+  then the Pour lines or the installer line. By hand: `tar -xzf Mend_1.0.13_freebsd_amd64.tar.gz && sudo sh install.sh`
   installs to `/usr/local/bin/mend` with a menu entry and icon (`sh install.sh --uninstall` removes them).
 - **Haiku** — Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
 
@@ -452,14 +465,14 @@ On FreeBSD, run `pour upgrade mend` (or the installer again) to update.
 
 | System | CPU | Download | Updates itself |
 |---|---|---|---|
-| macOS 10.15+ | Apple silicon | `Mend_1.0.12_aarch64.dmg` | yes |
-| macOS 10.15+ | Intel | `Mend_1.0.12_x64.dmg` | yes |
-| Windows 10 / 11 | x64 | `Mend_1.0.12_x64-setup.exe` | yes |
-| Windows 11 | ARM64 | `Mend_1.0.12_arm64-setup.exe` | yes |
-| Linux | x86_64 | `Mend_1.0.12_amd64.AppImage` · `Mend_1.0.12_amd64.deb` | yes |
-| Linux | ARM64 | `Mend_1.0.12_arm64.deb` | yes |
+| macOS 10.15+ | Apple silicon | `Mend_1.0.13_aarch64.dmg` | yes |
+| macOS 10.15+ | Intel | `Mend_1.0.13_x64.dmg` | yes |
+| Windows 10 / 11 | x64 | `Mend_1.0.13_x64-setup.exe` | yes |
+| Windows 11 | ARM64 | `Mend_1.0.13_arm64-setup.exe` | yes |
+| Linux | x86_64 | `Mend_1.0.13_amd64.AppImage` · `Mend_1.0.13_amd64.deb` | yes |
+| Linux | ARM64 | `Mend_1.0.13_arm64.deb` | yes |
 | ChromeOS (Linux development environment) | x86_64 / ARM64 | the Linux `.deb` for the Chromebook's CPU | yes |
-| FreeBSD 14+ | amd64 | `Mend_1.0.12_freebsd_amd64.tar.gz` | no — rerun the installer |
+| FreeBSD 14+ | amd64 | `Mend_1.0.13_freebsd_amd64.tar.gz` | no — rerun the installer |
 | Haiku | — | not available | — |
 
 Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port, so there is no installer to build —
