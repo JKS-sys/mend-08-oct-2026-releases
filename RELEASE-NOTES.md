@@ -20,14 +20,6 @@ Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/re
 - **Safety and correctness fixes found in review:** an administrator script that could not start now never leaves an encryption password behind in its temporary folder; restoring onto one Linux partition unmounts only that partition (not `/boot` of the running system) and refuses to write if anything is still mounted; Raspberry Pi `/boot/firmware` and live-USB media count as the system disk; images are written as administrator only into real folders inside your home folder (no symlinks); Windows Eject sends the disk number and Explorer verbs on a drive root get the right path; per-disk commands from right-click, Dock and menu-bar menus act on the disk you clicked; `winmgmt` repairs run on Windows; MBR layouts stop at four partitions; RAID members are unmounted first.
 - **Settings → Privacy** now says exactly what the anonymous hello sends and how often (every 30 minutes while Mend runs). The smallest window is now 420×300.
 
-### Install
-
-- **macOS** (Apple silicon and Intel): `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash`
-- **Windows** (PowerShell): `irm https://ipconfig.co.network/updates/mend/install.ps1 | iex`
-- **Linux** (AppImage): `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` — add `-s -- --deb` for the .deb
-
-First launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).
-
 ## Mend 1.0.13 — 15 Oct 2026
 
 - **Releases build in a fraction of the time, all on the Mac, with Pour:** every Rust build cache now lives *outside* the project folder — the Mac and Windows targets in `/Users/Shared/mend-build/target` (`MEND_BUILD_CACHE=` to move it), Linux in the Docker volumes `mend-target-<arch>`, `mend-cargo-<arch>` and `mend-npm` — so a freshly unzipped source still builds incrementally (only Mend itself recompiles: about a minute per target instead of 8–10). The web app is built once and every `tauri build` reuses `dist/`. The two Linux builds run in the background while the Mac and Windows installers build (`--serial` to run them afterwards; the log is kept in `.release-cache/linux-build.log`). The build tools (nsis, llvm, docker, colima, node, gh…) are installed with **Pour** — Homebrew is never required; it is used only as a last resort when it happens to be present and Pour could not install something. Both GitHub repos get the full **20 topics** GitHub allows (`scripts/repo-details.sh` trims longer lists and warns about shorter ones).
