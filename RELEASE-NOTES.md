@@ -2,6 +2,12 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.15 — 26 Oct 2026
+
+- **Mend is now built for macOS on Apple silicon only** (M1 and newer). Intel Mac, Windows and Linux builds are no longer made or published, so releases build much faster.
+- **No more Workers KV — the daily limit can no longer break Mend's server.** Computers saying hello and crash reports now go straight to the ipconfig accounts service (one ping per computer every 25 minutes at most), and activation codes and subscription links are kept in the accounts service's own store instead of Workers KV, which kept running into Cloudflare's free daily cap. The Owner Panel's Computers and Crashes tabs read from the accounts service and can still forget a computer or delete one or all crash reports; codes and subscriptions still appear on the dashboard every 15 minutes.
+- **Disk Utility → + Volume checks a mistyped reserve or quota size first**, before it looks at your disks, so you get "that isn't a size" instead of a confusing "choose an APFS container" message.
+
 ## Mend 1.0.14 — 17 Oct 2026
 
 - **Mount, unmount and eject work again — fixed at the cause.** On a Mac an external APFS drive shows its physical store partition, which can never be mounted, and Mend offered Mount for it; whole drives and containers had no Mount, Unmount or Eject at all; Eject of an APFS volume ejected the synthesized container instead of the drive; and a busy volume just failed. Now a store partition mounts its container, whole drives and containers get Mount all / Unmount all / Eject, Eject always ejects the physical drive (or the disk image), a busy volume offers **Who is using it?** and **Force unmount**, system and hidden partitions (EFI, Recovery, ISC, MSR) are no longer offered, snapshot ids like `disk3s1s1` are accepted, unmounted whole-disk sticks without a partition map appear, and the list refreshes after every job and every 5 s while the page is open (drives plugged in or mounted in Finder appear by themselves). Linux: unlocked LUKS/LVM volumes mount and unmount through their inner device, `mount`/`umount` are used when udisks2 is missing, and FreeBSD lists its disks with `gpart`. Windows: offline or read-only disks get **Bring online**, and folder mount points count as mounted.
@@ -972,8 +978,6 @@ Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/re
 
 ### Install
 
-- **macOS** (Apple silicon and Intel): `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash`
-- **Windows** (PowerShell): `irm https://ipconfig.co.network/updates/mend/install.ps1 | iex`
-- **Linux** (AppImage): `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` — add `-s -- --deb` for the .deb
+- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`
 
 First launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).
