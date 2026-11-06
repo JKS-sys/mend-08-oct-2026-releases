@@ -2,6 +2,12 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.19 — 06 Nov 2026
+
+- **Fix all problems no longer closes Mend.** On a big contact list, each fixed contact was saved on its own and the whole list was checked again after every one, thousands of times over, until the window froze and macOS closed it. Mend now works out every fix first and saves them together, with one redraw at the end.
+- **The Fix button counts problems, not contacts.** It says, for example, "Fix all 1,240 problems in 812 contacts", because one contact can have several problems. Problems Mend can't fix by itself are counted separately.
+- **Country codes your way.** Contacts → Fix has a choice for numbers written without a country code: **Find each contact's country**, the new default, keeps a number with your code when it is a real number in your country; otherwise it uses the country the contact's other numbers, address or email point to, and says which. **Use my country code** gives every such number your code. **Don't add country codes** leaves every number exactly as written. Mend remembers the choice.
+
 ## Mend 1.0.18 — 06 Nov 2026
 
 - **An iPhone backup's contacts go into the library in one click.** A read-only source (an iPhone backup) now shows **Make an editable copy**, which copies every contact, field, photo and group into a new Mend library book and opens it, ready to edit and fix. Copy & move can also copy into a new library book, even when there is no account or book yet (before, it said to add one first and offered no way to).
