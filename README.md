@@ -8,10 +8,10 @@
 
 <h1 align="center">Mend</h1>
 
-<p align="center"><b>Mend — an AI repair kit for iPhone, Android, Mac, Windows, Linux and every disk</b></p>
+<p align="center"><b>Mend — an AI repair kit for iPhone, Android, the Mac and every disk · a Mac app for Apple silicon</b></p>
 
 <p align="center">
-  Version <b>1.0.15</b> · released 26 Oct 2026 ·
+  Version <b>1.0.16</b> · released 06 Nov 2026 ·
   <a href="https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest">Download</a> ·
   <a href="https://ipconfig.co.network/mend">Website</a> ·
   <a href="RELEASE-NOTES.md">Release notes</a>
@@ -104,7 +104,7 @@ App Store apps as **.ipa** files with your own Apple Account (ipatool) and insta
 <p align="center"><img src="demos/autobackup.webp" width="900" alt="Automatic backups: turning on a daily Wi-Fi schedule, taking a snapshot, archiving one and cleaning old ones"></p>
 
 **Automatic backups with snapshots.** Daily or weekly, over USB or Wi-Fi, for one device or every connected one — even
-while Mend is closed (launchd on a Mac, a systemd timer on Linux, Task Scheduler on Windows). Each backup keeps a
+while Mend is closed (a launchd agent). Each backup keeps a
 **snapshot** (an APFS clone on a Mac, so unchanged files take no extra space), snapshots you archive are kept forever,
 and old ones are **cleaned** by count and age. Point the backups folder at an external drive or a NAS.
 **Messages, WhatsApp and everything else** export as CSV or HTML, and as an **evidence report** for court or
@@ -130,7 +130,7 @@ the account, saves a .vcf copy and adds the rest to your iCloud, Google or other
 <p align="center"><img src="demos/presence.webp" width="900" alt="Settings: choosing Menu bar only, Background only, Dock only and Dock and menu bar"></p>
 
 **Dock, menu bar or background.** Show Mend in the Dock and the menu bar, only one of them, or neither — running
-quietly in the background (taskbar and system tray on Windows and Linux). **Left-click** the menu-bar icon for the
+quietly in the background. **Left-click** the menu-bar icon for the
 quick panel — connected devices, every disk with its health, twelve one-click actions — and **right-click** it for the
 full menu: a status line, Quick Fixes, Repair, Back up, Contacts, Mend AI, Appearance, Animations, Language, Mend
 Lives In and Window & Help. Whenever Mend is in the Dock, closing the last window quits it completely; with the
@@ -424,73 +424,43 @@ keeps everything on the computer), shown as before → after rows you tick befor
 
 Mend drives free, open tools for phones and SMART data. It shows what's missing and opens a terminal with the install command:
 macOS `pour install libimobiledevice libirecovery ideviceinstaller smartmontools ipatool` (Pour is installed first when it is missing — never Homebrew) (idevicerestore and afcclient for device files come with the newest libimobiledevice, which Mend builds for you; Apple Configurator adds profiles and supervision) and
-`pour install --cask android-platform-tools`; Debian/Ubuntu `sudo apt install libimobiledevice-utils ideviceinstaller idevicerestore usbmuxd smartmontools adb fastboot`;
-Windows `winget install smartmontools.smartmontools Google.PlatformTools`.
+`pour install --cask android-platform-tools`.
 
 ## Install
 
-**One way for every system — Pour.** Pour is the package manager for ipconfig.co.network apps; the first line installs
-Pour, the second installs Mend (and later `pour upgrade mend` updates it):
+**Mend is a Mac app for Apple silicon** (M1 and later, macOS 11 Big Sur or later). It still repairs the iPhones,
+iPads, Android phones and the Mac, Windows and Linux disks you plug into the Mac.
+
+**With Pour** — the package manager for ipconfig.co.network apps; the first line installs Pour, the second installs Mend
+(and later `pour upgrade mend` updates it):
 
 ```bash
 curl -fsSL https://ipconfig.co.network/pour/install | sh
 pour install --cask mend
 ```
 
-That works on **macOS** (Apple silicon and Intel), **Linux** (x86_64 and ARM64, AppImage or .deb), **ChromeOS** (inside the
-Linux development environment) and **FreeBSD**. On **Windows** download
-[pour-windows-x86_64.exe](https://ipconfig.co.network/pour/install?os=windows) (or run `irm https://ipconfig.co.network/pour/install.ps1 | iex` in PowerShell), then:
-
-```powershell
-pour install --cask mend
-```
-
 `pour apps` lists everything Pour can install; `pour remove mend` uninstalls. There is no Homebrew formula, cask or tap for Mend.
 
-**If you'd rather not use Pour** — Mend's own one-line installer or a plain download:
+**Or** Mend's own one-line installer — `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` copies
+**Mend.app** to `/Applications` — or download `Mend_1.0.16_aarch64.dmg` from the
+[latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest). Releases signed with the
+creator's Apple Developer ID are notarised by Apple, so they open with a double-click.
 
-- **macOS** — Terminal: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` copies **Mend.app** to `/Applications`
-  and clears the quarantine flag. From the DMG by hand instead: run `xattr -cr /Applications/Mend.app` once before the first launch.
-- **Windows** — PowerShell: `irm https://ipconfig.co.network/updates/mend/install.ps1 | iex`. SmartScreen may warn on first launch:
-  *More info → Run anyway*. The same command installs the **ARM64** build on Windows on Arm (Snapdragon / Surface Pro X and similar) —
-  or download `Mend_1.0.15_arm64-setup.exe` from the [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest).
-- **Linux x86_64** — AppImage: `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` (installs to `~/.local/bin/mend`),
-  or download `Mend_1.0.15_amd64.AppImage`, then `chmod +x Mend_*.AppImage && ./Mend_*.AppImage` (needs `libfuse2`).
-  Debian / Ubuntu: `… | bash -s -- --deb`, or `sudo apt install ./Mend_1.0.15_amd64.deb`.
-- **Linux ARM64** (Raspberry Pi 4/5 with a 64-bit OS, ARM laptops and servers) — the same installer line picks `Mend_1.0.15_arm64.deb`
-  (`sudo apt install ./Mend_1.0.15_arm64.deb` by hand). ARM64 Linux has a .deb only — there is no ARM AppImage.
-- **ChromeOS** — **Settings → Advanced → Developers → Linux development environment → Turn on**, open the **Terminal** app and run
-  the Pour lines above (or the installer line — it reads `dpkg --print-architecture` and picks `amd64` or `arm64`). Open Mend from
-  the launcher (**Linux apps**). ChromeOS limits USB passthrough, so phone repair and SMART may not reach devices; backups,
-  contacts and the AI work fully. Share folders with Linux from the Files app.
-- **FreeBSD** (amd64, FreeBSD 14 or later, with a desktop) — as root: `pkg install webkit2-gtk_41 libimobiledevice smartmontools bash curl`,
-  then the Pour lines or the installer line. By hand: `tar -xzf Mend_1.0.15_freebsd_amd64.tar.gz && sudo sh install.sh`
-  installs to `/usr/local/bin/mend` with a menu entry and icon (`sh install.sh --uninstall` removes them).
-- **Haiku** — Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port.
+**Mac App Store** — a sandboxed version of Mend with App Store subscriptions. Apple's App Sandbox does not allow
+administrator repairs, raw disk access or the iPhone/Android USB tools, so those show a notice and a link here; one
+Mend account covers both versions.
 
-Mend updates itself on macOS, Windows (x64 and ARM64) and Linux (AppImage and .deb, x86_64 and ARM64): when a new
-version is out it offers to install it and restart. A .deb update asks for your password, like any package install.
-On FreeBSD, run `pour upgrade mend` (or the installer again) to update.
+Mend updates itself: when a new version is out it offers to install it and restart.
 
 ## Platforms
 
 | System | CPU | Download | Updates itself |
 |---|---|---|---|
-| macOS 10.15+ | Apple silicon | `Mend_1.0.15_aarch64.dmg` | yes |
-| macOS 10.15+ | Intel | `Mend_1.0.15_x64.dmg` | yes |
-| Windows 10 / 11 | x64 | `Mend_1.0.15_x64-setup.exe` | yes |
-| Windows 11 | ARM64 | `Mend_1.0.15_arm64-setup.exe` | yes |
-| Linux | x86_64 | `Mend_1.0.15_amd64.AppImage` · `Mend_1.0.15_amd64.deb` | yes |
-| Linux | ARM64 | `Mend_1.0.15_arm64.deb` | yes |
-| ChromeOS (Linux development environment) | x86_64 / ARM64 | the Linux `.deb` for the Chromebook's CPU | yes |
-| FreeBSD 14+ | amd64 | `Mend_1.0.15_freebsd_amd64.tar.gz` | no — rerun the installer |
-| Haiku | — | not available | — |
+| macOS 11+ | Apple silicon | `Mend_1.0.16_aarch64.dmg` | yes |
 
-Haiku isn't supported: Mend's window engine (Tauri/WebKit) has no Haiku port, so there is no installer to build —
-the Fix Library still covers Haiku problems, and a Haiku machine can be reached over SSH from Mend on another computer.
-
-Every installer above is built on the creator's Mac (`update.sh`: Windows with cargo-xwin + NSIS, Linux in Docker);
-Mac App Store and Microsoft Store packages are made with `--stores` when the store keys are present.
+Intel Macs, Windows, Linux, ChromeOS and FreeBSD builds stopped with 1.0.16; their older installers stay on the
+releases page. Every installer is built on the creator's Mac (`update.sh`); the Mac App Store package with
+`update.sh --appstore`.
 
 ## Pricing
 
