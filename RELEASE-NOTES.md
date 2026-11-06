@@ -2,6 +2,15 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.17 — 06 Nov 2026
+
+- **Contacts from an iPhone backup can be fixed.** A backup can't be changed, so Fix used to stop at "read-only". Fix now copies every contact into a new Mend library book (named after the phone, with "fixed" and the date), fixes the chosen problems there, and opens it. From there, Copy & move sends them to the phone or an account. The backup itself is never touched.
+- **The owner panel opens on the owner's Mac again.** The app was checking for the wrong Mac's serial number, so the owner's Mac was treated as an ordinary one. It now recognises the right Mac, and the test Mac stays an ordinary user.
+- **Log lines show what they are about at a glance.** Seven new line icons (battery, USB, passwords and signing, files, cleaning up, times and durations, searching), 21 in all, and each topic has its own colour, the same meaning as everywhere else in Mend (disks amber, phones cyan, contacts teal, backups green, AI violet, network blue). Never pink.
+- **A running log sounds and moves with what it is doing.** When a log moves on to a new topic (from the network to a disk, say), that line's icon gives a small bounce, and the log plays that topic's own short sound with its own little drawing, 14 new pairs in all (284 sounds). Still never more than three a second, quieter than the main sounds, and only with Animations set to Lively.
+- **Logs redraw with less work.** Each line's icon is worked out once, not every time the line is drawn again.
+- **Releasing from a fresh folder works.** The signature check read the last release as "vv1.0.15" and couldn't find it; it now reads the right release and finds its files whatever they are named.
+
 ## Mend 1.0.16 — 06 Nov 2026
 
 - **Installing the newest iPhone tools works again.** The build stopped with "Package 'libcurl' not found": macOS has libcurl and zlib built in but no pkg-config files for them, so Mend now points the build at the Mac's own copies. Nothing extra to install.
