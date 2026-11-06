@@ -2,6 +2,13 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.20 — 06 Nov 2026
+
+- **Every log at a glance.** Above the lines, a colour bar maps the whole log: errors red and tallest, warnings orange, steps violet, the rest in their topic's colour. Click anywhere on it to go to that line. Next to it, topic chips (Disk 12, Phone 3, Network 5…) in their own colours step through the lines about each topic, each with its own sound. The bars grow in and the chips pop in, and both stay still when Animations are off.
+- **"What to try next" when a repair didn't finish.** Under the result, Mend turns the tool's own error words into plain advice: no space, no network, cable or Trust, Find My, Full Disk Access, a disk in use, a missing helper, a damaged download, a wrong password. Each tip has its own icon and colour, slides in with a soft chime, and you can still use Ask AI why.
+- Two new sounds, each with its own drawing (286 in all).
+- **iPhone Standard and Deep Repair work when Mend is opened from the Dock or Finder.** A Mac app starts in a read-only folder, so the repair tool couldn't write its log, its lock file or the iOS download ("Read-only file system") and stopped at once. It now runs in Mend's own folder, `~/Library/Caches/Mend/iOS Firmware`, where the download is also kept for the next repair. Every other tool Mend runs now starts in a writable folder too.
+
 ## Mend 1.0.19 — 06 Nov 2026
 
 - **Fix all problems no longer closes Mend.** On a big contact list, each fixed contact was saved on its own and the whole list was checked again after every one, thousands of times over, until the window froze and macOS closed it. Mend now works out every fix first and saves them together, with one redraw at the end.
