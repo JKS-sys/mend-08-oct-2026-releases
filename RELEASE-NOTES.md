@@ -2,6 +2,12 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.18 — 06 Nov 2026
+
+- **An iPhone backup's contacts go into the library in one click.** A read-only source (an iPhone backup) now shows **Make an editable copy**, which copies every contact, field, photo and group into a new Mend library book and opens it, ready to edit and fix. Copy & move can also copy into a new library book, even when there is no account or book yet (before, it said to add one first and offered no way to).
+- **Fixing contacts no longer stops with "unexpected end of hex escape".** A contact with an emoji in a long note or name could be cut in the middle of the emoji when Mend saved it, and that half emoji stopped the save. Long lines are now split only between whole characters, a shortened note keeps whole emoji, and anything Mend sends from the window is checked for a half emoji first.
+- **One "Fix all problems" button.** Contacts → Fix now has a button that fixes every kind of problem at once (on an iPhone backup, into a new library book), next to the button that fixes only the ticked kinds.
+
 ## Mend 1.0.17 — 06 Nov 2026
 
 - **Contacts from an iPhone backup can be fixed.** A backup can't be changed, so Fix used to stop at "read-only". Fix now copies every contact into a new Mend library book (named after the phone, with "fixed" and the date), fixes the chosen problems there, and opens it. From there, Copy & move sends them to the phone or an account. The backup itself is never touched.
