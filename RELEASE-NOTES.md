@@ -2,6 +2,10 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.22 — 07 Nov 2026
+
+- **Every number gets its own country code, and Mend no longer asks for yours.** For a number written without a code, Mend looks at the contact first: their other numbers written with +, their address, their email's country domain. A number that is real there gets that country's code, so a UK contact's number becomes +44 even when it would also pass as Indian. Only when the contact points nowhere does Mend use this Mac's own country (from its Region setting). A number that is real in none of these is left exactly as written. Each fix says where its country came from. The "Your country code" box and the country code choice are gone from Fix and Numbers.
+
 ## Mend 1.0.21 — 07 Nov 2026
 
 - **Put another Mac in DFU from this one.** Other Mac now has **Put it in DFU for me**: connect a USB-C cable between both Macs' DFU ports, press the button, and the other Apple silicon Mac restarts straight into DFU, ready for Revive or Restore. No keys to hold, and nothing on it changes. It uses macvdmtool, which Mend builds the first time in about a minute (Install the DFU helper); it asks for your administrator password. The key combination is still there as the way by hand.
