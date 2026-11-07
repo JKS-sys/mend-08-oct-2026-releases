@@ -2,6 +2,12 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.23 — 07 Nov 2026
+
+- **Duplicates are cards that share a mobile number, and nothing else.** A matching name, a shared email, a shared office line, a fax or a pager no longer makes two cards one person. Whether a number is a mobile comes from its label (mobile, cell, iPhone), or else from Google's numbering rules.
+- **A better Duplicates tab.** Each group shows the mobile number its cards share. Click a card to keep its name and photo; it's marked "keep". **Preview** shows the merged card before you merge, including the note listing every card. **Not the same person** keeps a group apart for good (there is a way to show them again). A search box finds a group by name or number. **Undo** puts the last merge back into separate cards.
+- **Merge all saves in one go.** On big lists it no longer saves group by group, which froze the window, and it says how many people and cards it merged.
+
 ## Mend 1.0.22 — 07 Nov 2026
 
 - **Every number gets its own country code, and Mend no longer asks for yours.** For a number written without a code, Mend looks at the contact first: their other numbers written with +, their address, their email's country domain. A number that is real there gets that country's code, so a UK contact's number becomes +44 even when it would also pass as Indian. Only when the contact points nowhere does Mend use this Mac's own country (from its Region setting). A number that is real in none of these is left exactly as written. Each fix says where its country came from. The "Your country code" box and the country code choice are gone from Fix and Numbers.
