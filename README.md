@@ -11,7 +11,7 @@
 <p align="center"><b>Mend — an AI repair kit for iPhone, Android, the Mac and every disk · a Mac app for Apple silicon</b></p>
 
 <p align="center">
-  Version <b>1.0.20</b> · released 06 Nov 2026 ·
+  Version <b>1.0.21</b> · released 07 Nov 2026 ·
   <a href="https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest">Download</a> ·
   <a href="https://ipconfig.co.network/mend">Website</a> ·
   <a href="RELEASE-NOTES.md">Release notes</a>
@@ -442,7 +442,7 @@ pour install --cask mend
 `pour apps` lists everything Pour can install; `pour remove mend` uninstalls. There is no Homebrew formula, cask or tap for Mend.
 
 **Or** Mend's own one-line installer — `curl -fsSL https://ipconfig.co.network/updates/mend/install.sh | bash` copies
-**Mend.app** to `/Applications` — or download `Mend_1.0.20_aarch64.dmg` from the
+**Mend.app** to `/Applications` — or download `Mend_1.0.21_aarch64.dmg` from the
 [latest release](https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest). Releases signed with the
 creator's Apple Developer ID are notarised by Apple, so they open with a double-click.
 
@@ -456,7 +456,7 @@ Mend updates itself: when a new version is out it offers to install it and resta
 
 | System | CPU | Download | Updates itself |
 |---|---|---|---|
-| macOS 11+ | Apple silicon | `Mend_1.0.20_aarch64.dmg` | yes |
+| macOS 11+ | Apple silicon | `Mend_1.0.21_aarch64.dmg` | yes |
 
 Intel Macs, Windows, Linux, ChromeOS and FreeBSD builds stopped with 1.0.16; their older installers stay on the
 releases page. Every installer is built on the creator's Mac (`update.sh`); the Mac App Store package with
