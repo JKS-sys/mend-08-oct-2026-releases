@@ -2,6 +2,10 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.24 — 07 Nov 2026
+
+- **Delete contacts one by one, picked, or all at once, including from iCloud.** The contact list has **Select**: tick contacts (or **All**), then **Delete N**; or **Delete all**, which asks you to type DELETE. Before anything is deleted, a copy of those contacts goes into a Mend library book ("Deleted from … (date time)"), so Copy & move can put them back. iCloud contacts are deleted six at a time with a progress bar. One changed on another device since Mend read it is still deleted, because you asked for it gone. Any that can't be deleted are counted and named, and stay; the rest are gone.
+
 ## Mend 1.0.23 — 07 Nov 2026
 
 - **Duplicates are cards that share a mobile number, and nothing else.** A matching name, a shared email, a shared office line, a fax or a pager no longer makes two cards one person. Whether a number is a mobile comes from its label (mobile, cell, iPhone), or else from Google's numbering rules.
