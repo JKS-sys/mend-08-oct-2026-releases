@@ -2,6 +2,16 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.28 — 09 Nov 2026
+
+- **Merge all in a library book no longer loses or mixes up cards.** A book holding the same card id twice (contacts copied in twice, or an export from another app) gave those cards one shared key, so merging, saving or deleting one changed or removed the others too. Every card now gets its own key; a repeated id is given a new one, and a new card never takes an id the book already has.
+- **A library book that can't be saved says so.** The write is tried again three times. If it still fails, Mend tells you, your changes stay in memory while it's open, and the error goes to the error reports. Before, the failure was silent.
+- **Merge all can be resumed.** It merges 100 people at a time and saves each batch before the next. If it stops, from an error, a lost connection or a quit, the merged ones are kept, and **Resume** (with a progress bar) merges what is left.
+- **Resume after quitting.** An unfinished copy, move or Merge all is remembered after you quit. At the next start Mend says what wasn't finished and where to resume; anything already done is skipped. Fix all and Delete pick up where they stopped just by running them again.
+- **AI tidy never cuts a note.** A note is summarised into as many short lines as its facts need, every number, date, amount and name kept. The whole note is sent (a very long one on its own), the answer has room for all of it, and every contact is tidied (before, only the first 600).
+- **`update.sh --appstore` finds the provisioning profile by itself.** When `.env` has none, or one that doesn't read, it looks in Downloads, Desktop, the project folder and Xcode's profiles folders. It takes the newest Mac App Store profile for Mend's App Store bundle id and this Mac's Apple Distribution certificate, and saves it into `.env`, so `vault.mjs push` carries it to other Macs.
+- **App Store uploads fall back to the Apple ID.** When the App Store Connect API key's .p8 file isn't on this Mac, the upload uses the Apple ID and app-specific password instead of stopping.
+
 ## Mend 1.0.27 — 08 Nov 2026
 
 - **App Store listing pack.** Three app previews (1920x1080, 20-27 s, a spoken line for each caption over quiet music), seven 2880x1800 screenshots and every App Store Connect field in `docs/APPSTORE-LISTING.md`. They're made by `scripts/store-previews.mjs` from the App Store build with demo data, and show only what that edition does.
