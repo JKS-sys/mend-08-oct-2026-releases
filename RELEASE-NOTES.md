@@ -2,6 +2,12 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.27 — 08 Nov 2026
+
+- **App Store listing pack.** Three app previews (1920x1080, 20-27 s, a spoken line for each caption over quiet music), seven 2880x1800 screenshots and every App Store Connect field in `docs/APPSTORE-LISTING.md`. They're made by `scripts/store-previews.mjs` from the App Store build with demo data, and show only what that edition does.
+- **Privacy policy and support pages** at ipconfig.co.network/mend/privacy and /mend/support, for the App Store listing.
+- **`bash update.sh` with nothing new stops cleanly.** When CHANGELOG's Unreleased section is empty, it deploys the Worker, says there's nothing to publish and points to `bash update.sh --appstore`, instead of failing at the checks.
+
 ## Mend 1.0.26 — 08 Nov 2026
 
 - **Finder → Services reach the Mend you use.** Finder sends Services to whichever Mend.app macOS knows about, and a copy left in a build or download folder could catch the click and do nothing. Mend now registers itself as the one that answers, once per version, and refreshes the Services menu. The release script also makes macOS forget its build copies.
