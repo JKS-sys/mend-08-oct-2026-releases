@@ -2,6 +2,12 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.25 — 08 Nov 2026
+
+- **Logs show where the time went.** After a line, a small ticking clock shows how long until the next line, when that was 5 seconds or more: amber, orange from 30 seconds, red from 2 minutes. A slow download or a long wait for the phone stands out at a glance.
+- **Device cards read better.** A device's whole name shows on up to two lines ("Asha's iPhone", not "Asha's iPh…"), and each card has a slowly moving band in the device's own colour along the top.
+- **An empty ring looks ready, not broken.** A ring at 0 (no fixes run yet) shows a slow dashed circle in its own colour instead of a blank grey track.
+
 ## Mend 1.0.24 — 07 Nov 2026
 
 - **Delete contacts one by one, picked, or all at once, including from iCloud.** The contact list has **Select**: tick contacts (or **All**), then **Delete N**; or **Delete all**, which asks you to type DELETE. Before anything is deleted, a copy of those contacts goes into a Mend library book ("Deleted from … (date time)"), so Copy & move can put them back. iCloud contacts are deleted six at a time with a progress bar. One changed on another device since Mend read it is still deleted, because you asked for it gone. Any that can't be deleted are counted and named, and stay; the rest are gone.
