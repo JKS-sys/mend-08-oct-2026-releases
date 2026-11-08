@@ -2,6 +2,13 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.26 — 08 Nov 2026
+
+- **Finder → Services reach the Mend you use.** Finder sends Services to whichever Mend.app macOS knows about, and a copy left in a build or download folder could catch the click and do nothing. Mend now registers itself as the one that answers, once per version, and refreshes the Services menu. The release script also makes macOS forget its build copies.
+- **New Finder service: Remove Duplicates with Mend.** Right-click a folder or disk → Services → Remove Duplicates with Mend. Mend scans it, keeps one file in each group (by your Keep rule, never the last copy), and asks once before moving the extra copies to the Trash. Find Duplicates with Mend still only shows them.
+- **Deleting contacts no longer fills the library.** A copy in the Mend library is made only when you tick **Keep a copy in the library** in the Select bar; otherwise deleted contacts are simply gone, and the confirmation says so.
+- **Copying to iCloud can be resumed, and no longer stops on one bad card.** A busy server or a dropped connection (429, 5xx, time-outs) is retried three times, slower each time. A contact that still won't go is set aside while the rest carry on. Accounts take four contacts at a time. An unfinished copy or move is remembered, even after quitting, and Copy & move shows **Resume**. Resuming skips every contact already in iCloud (same card id), so nothing is doubled. The summary says how many arrived, how many were already there, and how many didn't go and why.
+
 ## Mend 1.0.25 — 08 Nov 2026
 
 - **Logs show where the time went.** After a line, a small ticking clock shows how long until the next line, when that was 5 seconds or more: amber, orange from 30 seconds, red from 2 minutes. A slow download or a long wait for the phone stands out at a glance.
