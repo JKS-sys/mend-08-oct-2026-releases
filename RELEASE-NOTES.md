@@ -2,6 +2,11 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.29 — 09 Nov 2026
+
+- **Saving to iCloud no longer fails with "invalid args book".** The list of contact sources is rebuilt now and then, and a rebuilt iCloud source that wasn't loaded again had lost which address book to save into. Merging, fixing or copying into it then failed. Mend now remembers each account's address book, and looks it up again if needed.
+- **Merge all no longer stops every 100 people.** Every merge is worked out first; then they're saved 100 at a time. A batch that fails is retried once and then set aside, and the next batch still runs. The summary says how many were merged and how many couldn't be saved and why, and Resume tries those again.
+
 ## Mend 1.0.28 — 09 Nov 2026
 
 - **Merge all in a library book no longer loses or mixes up cards.** A book holding the same card id twice (contacts copied in twice, or an export from another app) gave those cards one shared key, so merging, saving or deleting one changed or removed the others too. Every card now gets its own key; a repeated id is given a new one, and a new card never takes an id the book already has.
