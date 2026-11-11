@@ -2,6 +2,11 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.30 — 11 Nov 2026
+
+- **"Rebuild Open With" and the Mac quick fixes work on current macOS.** They ran `lsregister -kill`, which macOS has removed ("The -kill option has been removed because it was dangerous and no longer useful"), so the step failed. Mend now rebuilds the list without it.
+- **Apple Configurator in Helpers is a button, not a command.** Instead of showing `open 'https://apps.apple.com/…'`, it says "Free on the Mac App Store" with **Get it**, which opens the App Store page directly, with no Terminal window.
+
 ## Mend 1.0.29 — 09 Nov 2026
 
 - **Saving to iCloud no longer fails with "invalid args book".** The list of contact sources is rebuilt now and then, and a rebuilt iCloud source that wasn't loaded again had lost which address book to save into. Merging, fixing or copying into it then failed. Mend now remembers each account's address book, and looks it up again if needed.
