@@ -2,6 +2,10 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.32 — 13 Nov 2026
+
+- **"Is everything in iCloud?" is easy to find.** It was a section far down the Contacts Overview. It now has its own entry at the top of the Contacts side list, a button in the page header, a banner on Overview, and a link on every iPhone backup and "On My Mac" page.
+
 ## Mend 1.0.31 — 13 Nov 2026
 
 - **iCloud syncing fixes for the Mac and iPhone.** Five new one-click tools, in Contacts → "Is everything in iCloud?", on the System page (iCloud syncing) and on the iPhone page:
