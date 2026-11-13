@@ -2,6 +2,10 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.34 — 13 Nov 2026
+
+- **Fixed: "This Mac shows no contact accounts".** On some Macs macOS returned an empty list of accounts even though Mend was allowed to read Contacts, so iCloud and "On My Mac" never appeared. Mend now finds the accounts three ways (the full list, the default account, then the account of each contact), and one account that cannot be counted no longer hides the rest. If macOS still gives none, Mend shows what macOS said and offers the fixes in order: Restart contact syncing, **Ask for Contacts access again** (new: clears only Mend's Contacts permission so macOS asks afresh), and Open Contacts. The Contacts side list also says so instead of showing nothing.
+
 ## Mend 1.0.33 — 13 Nov 2026
 
 - **"Is everything in iCloud?" has a row for this Mac.** It lists each account on the Mac with its contact count (iCloud, On My Mac, Google…), marks the default account, and says where new contacts go. If Mend is not allowed to read the Mac's contacts, the row says so with an **Allow access** button, instead of showing nothing for the Mac.
