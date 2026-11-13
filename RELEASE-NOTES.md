@@ -2,6 +2,21 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.31 — 13 Nov 2026
+
+- **iCloud syncing fixes for the Mac and iPhone.** Five new one-click tools, in Contacts → "Is everything in iCloud?", on the System page (iCloud syncing) and on the iPhone page:
+  - **Check iCloud syncing** (Mac): signed in, iCloud Contacts on, Apple's contact servers answering, the clock, iCloud storage, the sync helpers, Low Power Mode and proxies. Each line says OK or what to change.
+  - **Restart contact syncing** (Mac): restarts the helpers that sync contacts and starts a fresh sync. Nothing is deleted.
+  - **Restart push and DNS** (Mac): for changes that arrive only after a long wait or a restart.
+  - **Check iCloud on the iPhone**: read from the phone over the cable, with no backup needed: what its contacts sync with, its clock and its free space.
+  - **Watch the iPhone sync**: listens for 40 seconds and shows only the contact and iCloud lines, with failures explained (sign in again, iCloud storage full).
+- **Contacts: why an iPhone's contacts are not on icloud.com.** "Is everything in iCloud?" now looks inside the iPhone's backup and shows where the phone keeps each contact: iCloud, "On My iPhone", Gmail or another account, with a count for each. It names the cause (iCloud Contacts is off on the phone, contacts kept "On My iPhone" only, contacts landing in Gmail or Exchange, or a backup too old to include recent ones) and the exact iPhone setting to change. The check then lists the iPhone's contacts that icloud.com lacks and sends them to iCloud directly from the Mac. Contacts that are in the phone's iCloud list yet missing from icloud.com mean syncing is stuck: Mend says so, sends them, and gives six steps to restart syncing on the iPhone. A connected iPhone with no backup gets a Back up button.
+- **Contacts: "Is everything in iCloud?"** For contacts made on the Mac or iPhone that never show on icloud.com. Mend now says why: the default account is "On My Mac" (which never syncs) or another account such as Google, iCloud Contacts is off, or iCloud is at its 50,000 limit, each with the exact setting to change and a button to open it. **Check what is missing from iCloud** compares iCloud with "On My Mac", other accounts and iPhone backups (by number, email, id, then name) and lists the people iCloud lacks; **Send to iCloud** adds them. Nobody is sent twice, a stopped send picks up where it left off, the originals stay put, and a photo too large for iCloud (over 224 KB) is left off so the person still arrives.
+- **"Open settings" and Call buttons work.** Mend only opened https and mail links, so the button to the Contacts privacy setting and the Call button on a number did nothing. System Settings panes, the Contacts app and phone links now open.
+- **Owner Panel: a world map of where Mend is used.** Computers → a map with one bubble per country, sized by the number of computers, with a green pulse where someone is active right now and gold where there is a Pro user. Click a country (or its chip under the map) to list just its computers. The map scales with the window, so nothing overlaps when it shrinks.
+- **The Mend web page loads faster.** The finished page is kept at Cloudflare's edge for five minutes, so a visit no longer waits for storage, the release notes and the site layout each time. A new release shows within five minutes.
+- **FEATURES.md.** One file listing what Free and Mend Pro each get, written to copy onto the Mend page on ipconfig.co.network. A test checks its numbers (fix counts, sounds, free limits, prices) against the app, so it can't fall out of date unnoticed.
+
 ## Mend 1.0.30 — 11 Nov 2026
 
 - **"Rebuild Open With" and the Mac quick fixes work on current macOS.** They ran `lsregister -kill`, which macOS has removed ("The -kill option has been removed because it was dangerous and no longer useful"), so the step failed. Mend now rebuilds the list without it.
