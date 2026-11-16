@@ -2,6 +2,10 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.39 — 16 Nov 2026
+
+- **Put the other Mac in DFU: says plainly when this Mac cannot do it.** On some Macs the USB-C controller refuses every command from an app (the unlock, the reset and the DFU message). Mend now recognises that at the first try, stops retrying, no longer blames the cable, and gives the steps to put the other Mac in DFU by hand (desktop and laptop). The tool's compiler warnings no longer fill the log.
+
 ## Mend 1.0.38 — 16 Nov 2026
 
 - **Put the other Mac in DFU: fixed "Failed to send VDM" when the port already says "Status: DBMa".** The DFU tool skipped unlocking the USB-C controller whenever the port was already in that state, and a locked controller refuses the message. Mend now builds the tool with three changes: it unlocks every time, sends the message up to three times, and can use any USB-C port (when the first port has no cable, Mend looks at the others). An older build is rebuilt by itself the next time you press the button (about a minute).
