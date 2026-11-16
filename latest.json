@@ -1,14 +1,14 @@
 {
-  "version": "1.0.36",
-  "notes": "## Mend 1.0.36 — 16 Nov 2026\n\n- **Fixed: the release stopped at \"Exceeded allowed rows written in Durable Objects free tier\".** Every release sent a \"create the table\" command to Mend's database in the ipconfig dashboard, which counts as a write, and the dashboard's free daily write allowance was used up. A release now only looks, and writes nothing when the table is already there. If the allowance is used up it says so and carries on.\n- **Updated for the new ipconfig accounts API (daily write budget).** Mend's server now writes far less to the dashboard: the 15-minute push is skipped when codes, subscriptions and the version have not changed (at most one repeat a day), a refused push waits for the next day instead of retrying, and the same value is never written twice. Activation codes stay readable on a day the dashboard refuses writes.\n- **Fixed: \"macvdmtool can be changed without administrator rights\" when putting another Mac in DFU.** Mend builds the DFU tool in your Mend folder, and it refuses to run anything from there as administrator. The same password prompt now first places a protected copy in /Library/Application Support/Mend/bin and runs that copy, so **Put the other Mac in DFU** works.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
-  "pub_date": "2026-11-16T12:08:25Z",
+  "version": "1.0.37",
+  "notes": "## Mend 1.0.37 — 16 Nov 2026\n\n- **Put the other Mac in DFU: retries, and says what to do when the cable refuses.** When the tool answered \"Exiting DBMa mode... Failed / Failed to send VDM\", Mend stopped with a bare error. It now tries three times a few seconds apart (a port left half-switched by an earlier try often answers on the second), and if it still fails it lists the fixes in order: unplug both ends for 10 seconds, use a plain USB-C charge cable (not Thunderbolt), use the DFU port on both Macs, make sure the other Mac has power, or enter DFU by hand.\n\n### Install\n\n- **macOS on Apple silicon** (M1 and newer): `curl -fsSL https://ipconfig.co.network/pour/install | sh` then `pour install --cask mend`\n\nFirst launch on macOS after a manual DMG install: `xattr -cr /Applications/Mend.app` (Mend is ad-hoc signed, not notarized).",
+  "pub_date": "2026-11-16T12:32:08Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SHl1ekFLek9BaFdMYVBFaXRuTFR2WmdBYXpiY3M0WktFa1RlckltUVVYeFdYNzRrR3F1d2JkcitmbGVVV2JFRTc1T3o5TlVqQ0F5UWVvTVhweUpTeFFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0ODMwODc1CWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjM2CmtUQ0Vnb1IwNVlFYTQyL0treVVZd3JNMGtuQU05Vk5aYmpEdEJoRWFDUFZIMitsditoaXZHVGRYVlJaYlFtaWFxbkMybnVraFlxa1dnQ1E2RE1lbURRPT0K",
-      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.36/Mend_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUSUVLMDNkb2V5SCtqSUxTSlVjSC9oWGFmSDdrc00ydnFXdEhmemNGMTZCVThFaFRuNldZa254V2Q3RmhjV25HVzBxSVc5WlZSZTdCOUZaTFlqc29pMk80cDFsQzMrWFEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0ODMyMjkxCWZpbGU6TWVuZC5hcHAudGFyLmd6CXZlcnNpb246MS4wLjM3CmtBWFE4MnM3a096M3JKNlRneDhoU2J4MDBEL2RMYmhnWFE2cVU4bVZpc1lxQnFNZmI3dUlzeEdSWFRFZ1ZKeUV6YWt4dDE2aExwQ1IxVHUzQmVGWUNBPT0K",
+      "url": "https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/download/v1.0.37/Mend_aarch64.app.tar.gz"
     }
   },
   "downloads": {
-    "mac_arm": "Mend_1.0.36_aarch64.dmg"
+    "mac_arm": "Mend_1.0.37_aarch64.dmg"
   }
 }
