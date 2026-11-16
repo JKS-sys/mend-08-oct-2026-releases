@@ -2,6 +2,12 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.36 — 16 Nov 2026
+
+- **Fixed: the release stopped at "Exceeded allowed rows written in Durable Objects free tier".** Every release sent a "create the table" command to Mend's database in the ipconfig dashboard, which counts as a write, and the dashboard's free daily write allowance was used up. A release now only looks, and writes nothing when the table is already there. If the allowance is used up it says so and carries on.
+- **Updated for the new ipconfig accounts API (daily write budget).** Mend's server now writes far less to the dashboard: the 15-minute push is skipped when codes, subscriptions and the version have not changed (at most one repeat a day), a refused push waits for the next day instead of retrying, and the same value is never written twice. Activation codes stay readable on a day the dashboard refuses writes.
+- **Fixed: "macvdmtool can be changed without administrator rights" when putting another Mac in DFU.** Mend builds the DFU tool in your Mend folder, and it refuses to run anything from there as administrator. The same password prompt now first places a protected copy in /Library/Application Support/Mend/bin and runs that copy, so **Put the other Mac in DFU** works.
+
 ## Mend 1.0.35 — 13 Nov 2026
 
 - **Fixed: "Missing udid" on the iPhone iCloud tools.** In Contacts → "Is everything in iCloud?", Check iCloud on the iPhone, Watch the iPhone sync and Restart were started without the phone's ID, so each stopped with "Missing udid". They now get it. The same mistake hid connected phones from Contacts: an iPhone with no backup showed without its name, a backed-up iPhone was never marked "connected", and Android phones were not read. All three are fixed.
