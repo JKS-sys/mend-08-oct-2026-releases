@@ -2,6 +2,10 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.38 — 16 Nov 2026
+
+- **Put the other Mac in DFU: fixed "Failed to send VDM" when the port already says "Status: DBMa".** The DFU tool skipped unlocking the USB-C controller whenever the port was already in that state, and a locked controller refuses the message. Mend now builds the tool with three changes: it unlocks every time, sends the message up to three times, and can use any USB-C port (when the first port has no cable, Mend looks at the others). An older build is rebuilt by itself the next time you press the button (about a minute).
+
 ## Mend 1.0.37 — 16 Nov 2026
 
 - **Put the other Mac in DFU: retries, and says what to do when the cable refuses.** When the tool answered "Exiting DBMa mode... Failed / Failed to send VDM", Mend stopped with a bare error. It now tries three times a few seconds apart (a port left half-switched by an earlier try often answers on the second), and if it still fails it lists the fixes in order: unplug both ends for 10 seconds, use a plain USB-C charge cable (not Thunderbolt), use the DFU port on both Macs, make sure the other Mac has power, or enter DFU by hand.
