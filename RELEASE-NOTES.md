@@ -2,6 +2,10 @@
 
 Newest first. Downloads: https://github.com/JKS-sys/mend-08-oct-2026-releases/releases/latest · https://ipconfig.co.network/mend
 
+## Mend 1.0.37 — 16 Nov 2026
+
+- **Put the other Mac in DFU: retries, and says what to do when the cable refuses.** When the tool answered "Exiting DBMa mode... Failed / Failed to send VDM", Mend stopped with a bare error. It now tries three times a few seconds apart (a port left half-switched by an earlier try often answers on the second), and if it still fails it lists the fixes in order: unplug both ends for 10 seconds, use a plain USB-C charge cable (not Thunderbolt), use the DFU port on both Macs, make sure the other Mac has power, or enter DFU by hand.
+
 ## Mend 1.0.36 — 16 Nov 2026
 
 - **Fixed: the release stopped at "Exceeded allowed rows written in Durable Objects free tier".** Every release sent a "create the table" command to Mend's database in the ipconfig dashboard, which counts as a write, and the dashboard's free daily write allowance was used up. A release now only looks, and writes nothing when the table is already there. If the allowance is used up it says so and carries on.
